@@ -78,7 +78,8 @@ def frame_rows(recs, leps):
     return X, y
 
 
-def main():
+def compute():
+    """All policies incl. leave-one-take-out baselines -> (episodes, missed, fitted, take names)."""
     takes = scenario_takes()
     loaded = load_all(takes)
     names = [m["take"] for m, *_ in loaded]
@@ -117,6 +118,11 @@ def main():
 
     eps, missed = episode_records(takes, loaded=loaded,
                                   extra=lambda recs, take: {m: held[m][take] for m in held})
+    return eps, missed, fitted, names
+
+
+def main():
+    eps, missed, fitted, names = compute()
     r = [e for e in eps if e["label"] == "r"]
     n = [e for e in eps if e["label"] == "n"]
     m_tot = sum(missed.values())
