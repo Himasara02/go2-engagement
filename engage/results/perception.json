@@ -1,0 +1,316 @@
+{
+ "per_take": {
+  "D1_S1_r1": {
+   "full_frame": {
+    "cmd_frames": 1,
+    "episodes": 0,
+    "commander_frames": 1,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 123,
+    "episodes": 5,
+    "commander_frames": 116,
+    "commander_bursts": 3
+   },
+   "commander_tids": [
+    1
+   ]
+  },
+  "D1_S1_r2": {
+   "full_frame": {
+    "cmd_frames": 301,
+    "episodes": 5,
+    "commander_frames": 301,
+    "commander_bursts": 5
+   },
+   "crop": {
+    "cmd_frames": 231,
+    "episodes": 10,
+    "commander_frames": 231,
+    "commander_bursts": 10
+   },
+   "commander_tids": [
+    1
+   ]
+  },
+  "D1_S1_r3": {
+   "full_frame": {
+    "cmd_frames": 217,
+    "episodes": 13,
+    "commander_frames": 217,
+    "commander_bursts": 13
+   },
+   "crop": {
+    "cmd_frames": 434,
+    "episodes": 22,
+    "commander_frames": 434,
+    "commander_bursts": 22
+   },
+   "commander_tids": [
+    1
+   ]
+  },
+  "D1_S2_r1": {
+   "full_frame": {
+    "cmd_frames": 51,
+    "episodes": 5,
+    "commander_frames": 25,
+    "commander_bursts": 2
+   },
+   "crop": {
+    "cmd_frames": 372,
+    "episodes": 38,
+    "commander_frames": 174,
+    "commander_bursts": 18
+   },
+   "commander_tids": [
+    4
+   ]
+  },
+  "D2_S1_r1": {
+   "full_frame": {
+    "cmd_frames": 0,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 0,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "commander_tids": []
+  },
+  "D2_S2_r1": {
+   "full_frame": {
+    "cmd_frames": 2,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 254,
+    "episodes": 32,
+    "commander_frames": 124,
+    "commander_bursts": 18
+   },
+   "commander_tids": [
+    2,
+    3,
+    17,
+    18,
+    21
+   ]
+  },
+  "D2_S3_r1": {
+   "full_frame": {
+    "cmd_frames": 73,
+    "episodes": 8,
+    "commander_frames": 1,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 520,
+    "episodes": 65,
+    "commander_frames": 82,
+    "commander_bursts": 12
+   },
+   "commander_tids": [
+    4,
+    18
+   ]
+  },
+  "D2_S3_r2": {
+   "full_frame": {
+    "cmd_frames": 0,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 262,
+    "episodes": 21,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "commander_tids": []
+  },
+  "D2_S4_r1": {
+   "full_frame": {
+    "cmd_frames": 0,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 81,
+    "episodes": 7,
+    "commander_frames": 12,
+    "commander_bursts": 1
+   },
+   "commander_tids": [
+    34
+   ]
+  },
+  "D2_S4_r2": {
+   "full_frame": {
+    "cmd_frames": 5,
+    "episodes": 0,
+    "commander_frames": 2,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 35,
+    "episodes": 3,
+    "commander_frames": 24,
+    "commander_bursts": 3
+   },
+   "commander_tids": [
+    9,
+    17
+   ]
+  },
+  "D2_S5_r1": {
+   "full_frame": {
+    "cmd_frames": 4,
+    "episodes": 0,
+    "commander_frames": 2,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 67,
+    "episodes": 3,
+    "commander_frames": 30,
+    "commander_bursts": 1
+   },
+   "commander_tids": [
+    12,
+    23
+   ]
+  },
+  "D2_S5_r2": {
+   "full_frame": {
+    "cmd_frames": 32,
+    "episodes": 3,
+    "commander_frames": 27,
+    "commander_bursts": 2
+   },
+   "crop": {
+    "cmd_frames": 78,
+    "episodes": 6,
+    "commander_frames": 74,
+    "commander_bursts": 6
+   },
+   "commander_tids": [
+    4,
+    11,
+    13,
+    14
+   ]
+  },
+  "D2_S6_r1": {
+   "full_frame": {
+    "cmd_frames": 10,
+    "episodes": 0,
+    "commander_frames": 0,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 173,
+    "episodes": 19,
+    "commander_frames": 17,
+    "commander_bursts": 2
+   },
+   "commander_tids": [
+    37,
+    38,
+    56,
+    60
+   ]
+  },
+  "D2_S6_r2": {
+   "full_frame": {
+    "cmd_frames": 16,
+    "episodes": 0,
+    "commander_frames": 1,
+    "commander_bursts": 0
+   },
+   "crop": {
+    "cmd_frames": 211,
+    "episodes": 22,
+    "commander_frames": 19,
+    "commander_bursts": 2
+   },
+   "commander_tids": [
+    45,
+    52
+   ]
+  }
+ },
+ "v2_identical": {
+  "D1_S1_r1": true,
+  "D1_S1_r2": true,
+  "D1_S1_r3": true,
+  "D1_S2_r1": true,
+  "D2_S1_r1": null,
+  "D2_S2_r1": true,
+  "D2_S3_r1": true,
+  "D2_S3_r2": true,
+  "D2_S4_r1": true,
+  "D2_S4_r2": true,
+  "D2_S5_r1": true,
+  "D2_S5_r2": true,
+  "D2_S6_r1": true,
+  "D2_S6_r2": true
+ },
+ "totals": {
+  "ff_cmd_frames": 712,
+  "cr_cmd_frames": 2841,
+  "ff_episodes": 34,
+  "cr_episodes": 253,
+  "ff_commander_frames": 577,
+  "cr_commander_frames": 1337,
+  "ff_commander_bursts": 22,
+  "cr_commander_bursts": 98
+ },
+ "episode_classes": {
+  "r": {
+   "fist": 31,
+   "one": 29,
+   "palm": 12,
+   "call": 19,
+   "mute": 10
+  },
+  "n": {
+   "call": 93,
+   "mute": 27,
+   "stop_inverted": 1,
+   "fist": 18,
+   "one": 1,
+   "palm": 1
+  },
+  "x": {
+   "call": 5,
+   "fist": 3,
+   "mute": 2,
+   "stop_inverted": 1
+  }
+ },
+ "all_classes_conf_ge_0.4": {
+  "dislike": 6439,
+  "fist": 821,
+  "one": 346,
+  "mute": 470,
+  "like": 420,
+  "call": 931,
+  "palm": 258,
+  "three2": 88,
+  "peace_inverted": 26,
+  "stop_inverted": 13,
+  "stop": 2,
+  "ok": 41,
+  "rock": 4
+ }
+}
