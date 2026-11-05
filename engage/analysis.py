@@ -39,13 +39,27 @@ def load_take(t, label_file="labels.json"):
     return meta, labels, recs, eps
 
 
-def episode_records(takes, label_file="labels.json", extra=None):
+def load_all(takes, label_file="labels.json"):
+    return [load_take(t, label_file) for t in takes]
+
+
+def sustained(frames_acc, n=3):
+    """Per-frame accepted tid sets -> per-frame sustained sets (>= n frames in a row),
+    the same rule as run_live.py / evaluate.py."""
+    cnt, out = {}, []
+    for acc in frames_acc:
+        cnt = {t: cnt.get(t, 0) + 1 for t in acc}
+        out.append({t for t, c in cnt.items() if c >= n})
+    return out
+
+
+def episode_records(takes, label_file="labels.json", extra=None, loaded=None):
     """One dict per episode: take, scenario, label (r/n/x/None), tid, gesture,
     start/end, acc[method] (bool), mean features.
-    extra(recs) -> {method: per-frame list of sustained tid sets} adds policies."""
+    extra(recs, take) -> {method: per-frame list of sustained tid sets} adds policies.
+    loaded: output of load_all(), to avoid reloading."""
     out, missed = [], {}
-    for t in takes:
-        meta, labels, recs, eps = load_take(t, label_file)
+    for meta, labels, recs, eps in (loaded or load_all(takes, label_file)):
         name = meta["take"]
         missed[name] = int(labels.get("_missed", 0) or 0)
         sus = {m: [set(r["sus"][m]) for r in recs] for m in METHODS}
