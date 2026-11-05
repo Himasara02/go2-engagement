@@ -1,0 +1,39 @@
+\section{Results}
+\label{sec:results}
+
+\begin{table}[t]
+\centering
+\caption{Bystander false-trigger rate (FT, lower is better) and commander
+recall (higher is better) with 95\% Wilson intervals.
+\RES{numbers from results/table}}
+\label{tab:main}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Stationary} & \multicolumn{2}{c}{Walking}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Policy & FT $\downarrow$ & Recall $\uparrow$ & FT $\downarrow$ & Recall $\uparrow$\\
+\midrule
+Gesture only      & \RES{} & \RES{} & \RES{} & \RES{}\\
+Nearest person    & \RES{} & \RES{} & \RES{} & \RES{}\\
+Gaze only         & \RES{} & \RES{} & \RES{} & \RES{}\\
+Learned (LR)      & \RES{} & \RES{} & \RES{} & \RES{}\\
+Type-1 engagement & \RES{} & \RES{} & \RES{} & \RES{}\\
+\textbf{IT2 engagement (ours)} & \RES{} & \RES{} & \RES{} & \RES{}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\TODO{Main result paragraph (Table~\ref{tab:main}).}
+
+\TODO{Operating curves: FT vs.\ recall when sweeping $\theta_E$; FT at 90\%
+recall.}
+
+\TODO{Where IT2 helps: results split by measured uncertainty (low/high
+$\sigma$), distance and occlusion; McNemar $p$.}
+
+\TODO{Ablations: without gaze, facing only, distance only, without approach
+speed; FOU scale $k$; noise injection.}
+
+\TODO{Closed loop: unintended robot motions per minute in walking takes;
+runtime.}

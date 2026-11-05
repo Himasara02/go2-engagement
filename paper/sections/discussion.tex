@@ -1,0 +1,17 @@
+\section{Discussion and Limitations}
+\label{sec:discussion}
+
+\TODO{What the results mean: which cue carried most of the information; why
+nearest-person fails when a bystander is closer; where IT2 helps and what it
+costs in recall.}
+
+\paragraph{Limitations.} Distance comes from a single RGB-D camera; the
+robot's built-in LiDAR is \TODO{not fused at run time / fused offline only}. Gaze is only informative
+at short range. The study uses a small number of participants in
+\RES{two} indoor locations, with labels from two annotators, so the results are
+indicative rather than definitive. Rule parameters were designed by hand and
+tuned on a single development recording.
+
+\paragraph{Future work.} LiDAR--camera fusion for distance, learning the rule
+parameters and the FOU scale from data, extending the gate to voice and
+pointing, and a user study of perceived safety and trust.

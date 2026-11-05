@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@page{size:1440px 810px;margin:0}
+*{box-sizing:border-box}
+body{margin:0;width:1440px;height:810px;font-family:"Times New Roman",Times,serif;color:#1d1c1a;background:#fff;overflow:hidden}
+.hdr{display:flex;align-items:center;gap:18px;padding:22px 36px 10px;border-bottom:3px solid #1d1c1a;margin:0 0 0}
+.hdr .lg{display:grid;grid-template-columns:auto auto;gap:6px 14px;align-items:center}
+.hdr .lg img{height:30px;object-fit:contain}
+.uom{height:96px!important}
+h1{font-size:40px;line-height:1.08;margin:0 0 6px;font-weight:700}
+.au{font-size:16.5px;font-weight:700}.af{font-size:15px;color:#333}
+.cols{display:grid;grid-template-columns:400px 520px 420px;gap:28px;padding:14px 36px 0}
+h2{font-size:25px;margin:0 0 6px}h2 span{color:#c4441c;font-size:16px;margin-right:6px;font-family:Arial}
+p{margin:0 0 8px;font-size:15.5px;line-height:1.3}
+.idea{background:#d6d3f6;border:1.5px solid #555;border-radius:10px;padding:10px 16px;margin:8px 0}
+.idea b{font-family:Arial;font-size:12px;letter-spacing:.06em}.idea div{font-size:20px;line-height:1.2}
+.red{color:#c4441c;font-weight:700;font-family:Arial;font-size:13.5px;margin:8px 0 2px}
+.small{font-size:14px;line-height:1.3}
+img.fr{width:100%;border-radius:6px;border:1px solid #ccc}
+.cap{font-size:12.5px;font-style:italic;color:#6a3d5d;margin:3px 0 6px}
+.box{border:1.6px solid #1d1c1a;border-radius:14px;padding:7px 12px;font-size:14px;background:#fff}
+.box.o{border-color:#c4441c;color:#c4441c;font-weight:700;display:flex;justify-content:space-between}
+.box.o span{color:#1d1c1a;font-weight:400}
+.box.p{background:#d6d3f6;text-align:center;font-size:16px}
+.ar{text-align:center;font-size:14px;line-height:12px;margin:2px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dash{border:1.6px dashed #1d1c1a;border-radius:12px;padding:8px 12px;margin-top:8px}
+.dash h3{margin:0 0 4px;font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.st{background:#dde1e0;border-radius:6px;padding:6px 8px}.st b{font-size:27px;display:block}.st span{font-size:11.5px;font-family:Arial;line-height:1.15;display:block}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:5px 6px;border-bottom:1px solid #ccc;text-align:left}th{font-size:13px}
+td.n,th.n{text-align:center}
+tr.hl td{color:#c4441c;font-weight:700}
+.tb{border:1.6px solid #1d1c1a;border-radius:10px;padding:8px 12px;margin-top:8px}
+.tb h3{margin:0 0 2px;font-size:16px}
+.key{background:#d6d3f6;border:1.5px solid #555;border-radius:10px;padding:8px 14px;margin-top:8px}
+.key b{font-family:Arial;font-size:12px;letter-spacing:.06em}.key div{font-size:16.5px;line-height:1.22}
+.foot{position:absolute;left:36px;right:36px;bottom:8px;font-size:12px;color:#333;display:flex;justify-content:space-between}
+</style></head><body>
+<div class="hdr">
+ <img class="uom" src="assets/logo_uom.png">
+ <div class="lg"><img src="assets/logo_entc.png"><img src="assets/logo_ee.png"><img src="assets/logo_wso2.png"><img src="assets/logo_rysera.png"></div>
+ <div style="margin-left:14px">
+  <h1>Fuzzy Engagement-Aware Gesture Command<br>Recognition for a Quadruped Robot in Crowds</h1>
+  <div class="au">Kaveeshwara Bandara · Rivikula Fernando · Agra Navarathna · Himasara Kulasinghe · Lasan Perera</div>
+  <div class="af">Faculty of Engineering, University of Moratuwa · Rysera Innovations · In collaboration with WSO2</div>
+ </div>
+</div>
+<div class="cols">
+<div>
+ <h2><span>01</span>The problem</h2>
+ <p>Gesture-controlled robots react to any hand that moves. In a crowd, a bystander waving at a friend can stop or start the robot by accident. Current pipelines classify the hand but never ask <i>whose</i> hand it is, or whether that person is even talking to the robot.</p>
+ <img class="fr" src="assets/{{FRAME}}" style="height:178px;object-fit:cover">
+ <div class="cap">{{FRAME_CAP}}</div>
+ <div class="idea"><b>OUR IDEA</b><div>Only trust a gesture from the person who is actually engaging with the robot — judged separately for every person in view.</div></div>
+ <div class="red">GESTURE → COMMAND</div>
+ <div class="small">Open palm → STOP · Fist → Forward · Call → Backward<br>One finger → Turn left · Two-up → Turn right<br>No accepted gesture for 0.5 s → robot stops</div>
+</div>
+<div>
+ <h2><span>02</span>Method: two fuzzy layers per person</h2>
+ <div class="box"><b>Sensor</b> · Unitree Go2 front camera, streamed to a laptop over WebRTC</div>
+ <div class="ar">↓</div>
+ <div class="two">
+  <div class="box"><b>Per-person pose + tracking</b><br>MediaPipe multi-person pose → ID, distance (monocular), approach speed, facing (head + body yaw), each ± measured σ</div>
+  <div class="box"><b>Hand → person → gesture</b><br>Hands matched to bodies by wrist → 18-class MLP gesture + confidence, smoothed per person</div>
+ </div>
+ <div class="ar">↓</div>
+ <div class="box o">Layer 1 · Engagement <span>E = f(distance, approach, facing)</span></div>
+ <div class="ar">↓</div>
+ <div class="box o">Layer 2 · Decision <span>act ⇔ E<sub>low</sub> ≥ θ(cmd) ∧ conf ≥ θ<sub>c</sub></span></div>
+ <div class="ar">↓</div>
+ <div class="box p">Several accepted at once → STOP wins, else most engaged · Move / StopMove</div>
+ <div class="dash"><h3>From Type-1 to Interval Type-2 fuzzy logic</h3>
+  <img src="assets/fou.png" style="width:100%;height:150px;object-fit:contain">
+  <div class="small">IT2 band width = this person's measured uncertainty, every frame. Acting on E<sub>low</sub> means a hard-to-see person needs more evidence. σ = 0 ⇒ IT2 ≡ Type-1.</div>
+ </div>
+</div>
+<div>
+ <h2><span>03</span>Results</h2>
+ <div class="stats">{{STATS}}</div>
+ <div class="tb"><h3>Bystander false triggers / commander recall</h3>
+ {{TABLE}}
+ </div>
+ <div class="key"><b>KEY FINDING</b><div>{{KEY}}</div></div>
+ <img src="assets/{{FIG}}" style="width:100%;height:132px;object-fit:contain;margin-top:6px">
+ <div class="cap" style="margin-top:0">{{FIG_CAP}}</div>
+</div>
+</div>
+<div class="foot"><span>All four policies see identical per-person features every frame; one drives the robot, all are logged.</span><span>{{URL}}</span></div>
+</body></html>

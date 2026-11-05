@@ -1,0 +1,63 @@
+% ICAISC 2027 submission -- Springer LNAI (llncs class)
+% Double-blind: keep the anonymous author block until camera-ready.
+% Overleaf: New Project -> Upload Project (this zip). llncs.cls and splncs04.bst
+% are built into Overleaf's TeX Live, so no extra files are needed there.
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% ---- writing helpers (delete before submission) --------------------------
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\RES}[1]{\textcolor{blue}{[#1]}}   % numbers filled in from results/
+% ---------------------------------------------------------------------------
+
+% notation
+\newcommand{\Elow}{\underline{E}}
+\newcommand{\Ehigh}{\overline{E}}
+\newcommand{\mulow}{\underline{\mu}}
+\newcommand{\muup}{\overline{\mu}}
+
+\begin{document}
+
+\title{Whose Gesture Is It? Uncertainty-Aware Interval Type-2 Fuzzy
+Engagement Gating for Gesture Commands to a Quadruped Robot in Crowds}
+\titlerunning{Interval Type-2 Engagement Gating for Gesture Commands in Crowds}
+
+% ---- ANONYMOUS for review. Real block is commented out below. -------------
+\author{Anonymous Author(s)}
+\authorrunning{Anonymous}
+\institute{Anonymous Institution}
+% \author{Kaveeshwara Bandara \and Rivikula Fernando \and Agra Navarathna
+%   \and Himasara Kulasinghe \and Lasan Perera}
+% \authorrunning{K. Bandara et al.}
+% \institute{Faculty of Engineering, University of Moratuwa, Sri Lanka}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% Acknowledgements are removed for double-blind review.
+% \begin{credits}
+% \subsubsection{\ackname} This work was supported by WSO2 ...
+% \end{credits}
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

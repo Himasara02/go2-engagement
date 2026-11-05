@@ -1,0 +1,37 @@
+\section{Experimental Setup}
+\label{sec:experiments}
+
+\paragraph{Platform.} \TODO{Unitree Go2 model, camera resolution and frame
+rate, laptop CPU, achieved fps.}
+
+\paragraph{Participants and scenarios.} \TODO{P participants (roles rotated),
+two locations, consent.} Six stationary scenarios: single commander (S1);
+bystanders gesturing to each other beside the commander (S2); commander and
+bystander gesturing simultaneously (S3); commander turning to gesture to a
+friend and back (S4); two people commanding at once (S5); bystanders walking
+past (S6). Three walking scenarios, with the robot driven by the IT2 policy:
+commander drives the robot among bystanders (W1), a bystander gestures nearby
+while it walks (W2), and people cross between robot and commander (W3).
+\TODO{number of takes, total minutes.}
+
+\paragraph{Policies.} All policies run on the same per-person features in the
+same frame (one drives the robot; all are logged): \emph{gesture-only} (any
+confident command gesture), \emph{nearest person}, \emph{gaze-only} (gesture
+from anyone whose gaze/facing exceeds a threshold), a \emph{learned} baseline
+(logistic regression on the same features, trained on the development split),
+\emph{Type-1} and \emph{IT2} engagement gates.
+
+\paragraph{Labels and metrics.} A gesture episode is one tracked person
+holding one command gesture for at least three frames. Two annotators
+independently labelled every episode as addressed to the robot or not
+(Cohen's $\kappa=$\RES{}~\cite{cohen1960kappa}); disagreements were resolved
+by a third. The \emph{bystander false-trigger rate} is the fraction of
+not-addressed episodes a policy would execute; \emph{commander recall} is the
+fraction of addressed episodes it executes. We report 95\% Wilson
+intervals~\cite{wilson1927probable}, compare IT2 and Type-1 on paired
+episodes with McNemar's test~\cite{mcnemar1947note}, and sweep $\theta_E$ to
+obtain false-trigger versus recall curves.
+
+\paragraph{Distance sources.} \TODO{Ablation: the IT2 gate with $\sigma_d$
+from a monocular estimate, from RGB-D depth, and (if available) from LiDAR--camera
+fusion; depth/LiDAR agreement on calibration takes.}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@page{size:A4;margin:18mm 15mm 18mm 15mm}
+body{font-family:"Times New Roman",Times,serif;font-size:10pt;line-height:1.28;color:#000}
+h1{font-size:17pt;text-align:center;margin:0 0 6pt;line-height:1.15}
+.au{text-align:center;font-size:10.5pt}.af{text-align:center;font-size:9pt;font-style:italic;margin-bottom:10pt}
+.abs{font-size:9pt;font-weight:bold;text-align:justify;margin-bottom:8pt}.abs i{font-weight:bold}
+.kw{font-size:9pt;margin-bottom:10pt}
+.cols{column-count:2;column-gap:7mm;text-align:justify}
+h2{font-size:10pt;text-transform:uppercase;text-align:center;margin:8pt 0 4pt;letter-spacing:.03em}
+h3{font-size:10pt;font-style:italic;font-weight:normal;margin:6pt 0 2pt}
+p{margin:0 0 5pt;text-indent:1em}
+figure{margin:6pt 0;break-inside:avoid;text-align:center}figure img{width:100%}
+figcaption{font-size:8pt;text-align:justify}
+table{border-collapse:collapse;width:100%;font-size:8.2pt;break-inside:avoid}
+th,td{border-top:.5pt solid #000;border-bottom:.5pt solid #000;padding:2pt 3pt;text-align:center}
+td:first-child,th:first-child{text-align:left}
+.eq{text-align:center;margin:4pt 0;font-style:italic}
+ol.ref{font-size:8pt;padding-left:14pt;margin:0}ol.ref li{margin-bottom:2pt}
+.wide{column-span:all}
+</style></head><body>
+<h1>Fuzzy Engagement-Aware Gesture Command Recognition for a Quadruped Robot in Crowds</h1>
+<div class="au">Kaveeshwara Bandara, Rivikula Fernando, Agra Navarathna, Himasara Kulasinghe, Lasan Perera</div>
+<div class="af">Faculty of Engineering, University of Moratuwa, Sri Lanka · Rysera Innovations · in collaboration with WSO2</div>
+<div class="abs"><i>Abstract</i>—Gesture interfaces for mobile robots classify what a hand is doing but not whose hand it is or whom the gesture addresses. In a crowd this lets bystanders command the robot by accident. We present a per-person engagement gate for gesture control of a Unitree Go2 quadruped. Every person in view is tracked with a monocular multi-person pose model; hands are attributed to bodies, gestures are classified per person, and a two-layer fuzzy system decides whether each gesture should be executed. Layer 1 estimates engagement from distance, approach speed and facing direction; Layer 2 combines engagement with gesture confidence. In the Interval Type-2 (IT2) variant, the footprint of uncertainty of each input is set at runtime from that person's measured perception uncertainty, and the decision uses the lower bound of the type-reduced engagement interval. On {{N_TAKES}} recordings with the real robot ({{N_EPS}} hand-labelled gesture episodes), {{ABS_RESULT}}</div>
+<div class="kw"><b><i>Keywords</i></b>—human–robot interaction, interval type-2 fuzzy logic, gesture recognition, engagement, quadruped robot</div>
+<div class="cols">
+<h2>I. Introduction</h2>
+<p>Hand gestures are a natural way to command a robot in noisy public spaces where speech fails. Existing pipelines, including our own earlier prototype, assume one user: a hand is detected, classified and mapped to a velocity command. In a lobby or café several people are in view and many of them gesture to each other. A bystander's open palm then stops the robot, or a fist sends it walking.</p>
+<p>The question a gesture interface must answer is therefore not only <i>what</i> gesture is shown but <i>who</i> is showing it and <i>whether it is meant for the robot</i>. We require that (i) gestures from different people are recognised and attributed separately, even when simultaneous, (ii) only gestures addressed to the robot are executed, and (iii) the same person is ignored when they turn and gesture to someone else.</p>
+<p>Our contributions are: a per-person perception pipeline that attributes gestures to individuals using only the robot's front camera; a two-layer fuzzy engagement gate; an IT2 variant whose footprint of uncertainty (FOU) is driven at runtime by measured perception uncertainty; and an evaluation on a real Go2 comparing gesture-only, nearest-person, Type-1 and IT2 policies on identical inputs.</p>
+<h2>II. Related Work</h2>
+<p><i>Engagement estimation.</i> Muñoz-Salinas et al. [1] estimate, with a Type-1 fuzzy system on stereo vision, how interested each tracked person is in interacting with a robot from their distance, angle and face orientation; our Layer 1 follows the same idea. Yun et al. [2] use a fuzzy engagement classifier to choose which of several people a robot should attend to. Both steer the robot's attention rather than gate commands, and neither models perception uncertainty. Learned engagement and addressee estimators exist but need training data from the target setting.</p>
+<p><i>Gesture control of legged robots.</i> Hand- and body-gesture interfaces for quadrupeds [3], [4] report good recognition accuracy but assume a single operator facing the robot. A recent review of proactive robots in group settings finds that most systems make this single-individual assumption [5].</p>
+<p><i>Type-2 fuzzy control under sensor noise.</i> IT2 systems have been used to handle sensor noise in robot control, typically with a FOU calibrated offline. Here the FOU width is a live per-person signal.</p>
+<h2>III. Method</h2>
+<h3>A. Per-person perception</h3>
+<p>Frames from the Go2 front camera are streamed to a laptop over WebRTC. MediaPipe Pose (up to four people) gives 33 landmarks per person; people are tracked frame to frame by nearest shoulder centre. Distance <i>d</i> is estimated from the apparent shoulder width (0.38 m prior), median-filtered over 12 frames; its uncertainty σ<sub>d</sub> is the larger of a range-dependent prior and the temporal standard deviation. Approach speed <i>v</i> is the smoothed negative derivative of <i>d</i>. The facing score <i>f</i> ∈ [0,1] combines head yaw (nose position between the ears, weighted by eye visibility) and body yaw (shoulder depth difference in world landmarks); σ<sub>f</sub> grows as face and shoulder landmarks become less visible and as <i>f</i> fluctuates.</p>
+<p>MediaPipe Hands detects up to eight hands. Each hand is assigned to the person whose pose wrist is nearest, normalised by shoulder width. Hand landmarks are classified by the team's 18-class keypoint MLP; labels are smoothed per person by majority vote over 7 frames, and the confidence is the mean softmax probability of the winning label times its vote share.</p>
+<h3>B. Layer 1: engagement</h3>
+<p>Distance uses Hall's proxemic zones (NEAR, MID, FAR), facing has LOW and HIGH sets and approach speed AWAY, STILL and TOWARD. Nine rules with singleton consequents map these to engagement, e.g. <i>IF facing is HIGH AND distance is MID THEN E = 0.85</i>; <i>IF facing is LOW AND distance is MID THEN E = 0.10</i>; <i>IF approach is AWAY THEN E = 0.10</i>.</p>
+<p>In the IT2 system every set has an uncertain centre <i>c</i> ∈ [<i>c</i> − kσ, <i>c</i> + kσ], where σ is that person's current measured uncertainty for that input. Rule firing intervals use the minimum t-norm on lower and upper memberships, and exact Karnik–Mendel type reduction gives [E<sub>low</sub>, E<sub>high</sub>]. With σ = 0 the IT2 system reduces exactly to the Type-1 system, so the two differ only in the use of measured uncertainty.</p>
+<h3>C. Layer 2: decision and arbitration</h3>
+<div class="eq">act ⇔ E<sub>low</sub> ≥ θ<sub>E</sub>(cmd) ∧ conf ≥ θ<sub>c</sub></div>
+<p>with θ<sub>E</sub> = 0.60 for motion commands and 0.45 for STOP (a safety bias), θ<sub>c</sub> = 0.55. The Type-1 policy uses its crisp E. A decision must persist for three frames. If several people are accepted at once, STOP wins; otherwise the most engaged person wins. Commands are sent as Move/StopMove at 10 Hz with speed capped at 0.3 m/s, and the robot stops 0.5 s after the last accepted gesture.</p>
+<figure><img src="assets/fou.png"><figcaption>Fig. 1. Left: the facing-HIGH set for three measured uncertainty levels. Right: engagement versus facing score for a person at 2.2 m; as uncertainty grows, IT2 requires a clearer view before E<sub>low</sub> crosses the acceptance threshold.</figcaption></figure>
+<h2>IV. Experiment</h2>
+<p>All four policies ran every frame on the same features: <i>gesture only</i> (any confident command gesture), <i>nearest person</i>, <i>Type-1</i> and <i>IT2</i>. One policy (IT2) drove the robot and all decisions were logged, so comparisons use identical inputs. We recorded six stationary scenarios (single commander; bystanders gesturing to each other; simultaneous gestures; commander turning to gesture to a friend; two commanders; bystanders walking past) and three walking scenarios (commander driving the robot among bystanders; a bystander gesturing nearby while it walks; occlusion by crossing people) with 3–4 volunteers at 1.5–4 m.</p>
+<p>A gesture episode is one tracked person holding one command gesture for at least three frames. Each episode was labelled by viewing the middle frame as <i>meant for the robot</i> or <i>not</i>. The <b>bystander false-trigger rate</b> is the fraction of not-for-robot episodes a policy would have executed; <b>commander recall</b> is the fraction of robot-directed episodes it executed. Intervals are 95% Wilson intervals.</p>
+<h2>V. Results</h2>
+{{TABLE}}
+<p style="margin-top:5pt">{{RESULT_TEXT}}</p>
+<figure><img src="assets/bars.png"><figcaption>Fig. 2. Bystander false triggers and commander recall per policy on the real Go2.</figcaption></figure>
+<figure><img src="assets/engagement_hist.png" style="width:75%"><figcaption>Fig. 3. Mean IT2 lower-bound engagement per episode, for gestures meant and not meant for the robot.</figcaption></figure>
+<h2>VI. Discussion and Limitations</h2>
+<p>Facing direction carries most of the information: a person gesturing to a friend is turned away from the robot. Distance alone (nearest person) fails whenever the bystander is closer than the commander. IT2 helps when perception is unreliable, as when the robot walks or people are partly occluded, because an uncertain person must look more clearly engaged before being obeyed; the cost is some recall for commanders who are hard to see.</p>
+<p>The study is small: one indoor space, few volunteers and labels from a single annotator, so the numbers are indicative. Distance is monocular; fusing the Go2's built-in LiDAR is future work, as are gaze from eye landmarks, learning rule parameters from data and a formal user study.</p>
+<h2>VII. Conclusion</h2>
+<p>Asking <i>whose</i> gesture it is, and whether that person is addressing the robot, is a simple change that matters in crowds. A per-person fuzzy engagement gate, with an IT2 band set by measured uncertainty, lets a quadruped follow its commander while ignoring the gestures people make to each other.</p>
+<h2>Acknowledgment</h2>
+<p>We thank WSO2 for supporting this work and Rysera Innovations for access to the robot.</p>
+<h2>References</h2>
+<ol class="ref">
+<li>R. Muñoz-Salinas, E. Aguirre, M. García-Silvente, A. González, "A fuzzy system for visual detection of interest in human-robot interaction," 2005.</li>
+<li>S.-S. Yun, M.-T. Choi, M. Kim, J.-B. Song, "Intention reading from a fuzzy-based human engagement model and behavioural features," <i>Int. J. Advanced Robotic Systems</i>, vol. 9, 2012.</li>
+<li>"HyperPalm: DNN-based hand gesture recognition interface for intelligent communication with quadruped robot in 3D space," arXiv:2209.09937, 2022.</li>
+<li>"Non-verbal interaction and interface with a quadruped robot using body and hand gestures: design and user experience evaluation," arXiv:2408.17066, 2024.</li>
+<li>"The individual-targeting assumption: a systematic review of proactive robots in human group settings," arXiv:2607.09734, 2026.</li>
+<li>E. T. Hall, <i>The Hidden Dimension</i>. Doubleday, 1966.</li>
+<li>N. N. Karnik, J. M. Mendel, "Centroid of a type-2 fuzzy set," <i>Information Sciences</i>, vol. 132, 2001.</li>
+<li>C. Lugaresi et al., "MediaPipe: a framework for building perception pipelines," arXiv:1906.08172, 2019.</li>
+</ol>
+</div>
+</body></html>

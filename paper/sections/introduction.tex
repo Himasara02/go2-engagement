@@ -1,0 +1,65 @@
+\section{Introduction}
+\label{sec:intro}
+
+Hand gestures are a natural way to command a mobile robot in places where
+speech is unreliable, such as a busy lobby, a laboratory or a caf\'e.
+Legged robots are increasingly deployed in exactly these spaces, and
+off-the-shelf pipelines now detect and classify hand gestures in real time on
+modest hardware~\cite{zhang2020mediapipehands,kapitanov2024hagrid}. Most
+gesture interfaces, however, assume a single user standing in front of the
+robot: a hand is detected, classified and mapped to a velocity command. In a
+crowd this assumption breaks. Several people are in view, many of them
+gesture to each other, and the robot cannot tell a command from a
+conversation. A bystander's open palm stops the robot; a fist meant for a
+friend sends it walking.
+
+The question a gesture interface must answer in a shared space is therefore
+not only \emph{which} gesture is shown, but \emph{who} is showing it and
+\emph{whether it is addressed to the robot}. We formulate three requirements:
+\begin{enumerate}
+\item[R1] gestures from different people are recognised and attributed to
+  the right person, even when they occur at the same time;
+\item[R2] only gestures addressed to the robot are executed;
+\item[R3] the same person is ignored when they turn and gesture to someone
+  else.
+\end{enumerate}
+
+Humans resolve this with nonverbal cues: people who address someone face
+them, look at them and stand within a social distance~\cite{hall1966hidden,
+kendon1990conducting}. These cues are easy to state as linguistic rules
+(``\emph{if} a person is facing the robot \emph{and} is at a social distance
+\emph{then} they are engaged''), which makes fuzzy logic a natural model.
+The difficulty is that the cues are measured from a moving robot: depth
+readings have holes and edge errors on people, gaze is only resolvable at
+short range, and orientation estimates degrade with occlusion and motion
+blur. A
+Type-1 fuzzy system treats every reading as exact. An Interval Type-2 (IT2)
+system can represent how much each reading should be trusted, but in most
+applications its footprint of uncertainty (FOU) is fixed at design time.
+
+We propose an engagement gate in which the FOU of every input is driven at
+run time by the measured uncertainty of that input for that person. When a
+person is clearly visible the IT2 system behaves like its Type-1 counterpart;
+when they are far away, partly occluded or turning, the engagement interval
+widens and the decision, taken on its lower bound, becomes conservative. The
+contributions of this paper are:
+\begin{itemize}
+\item a per-person perception pipeline for a quadruped robot that attributes
+  gestures to individuals and estimates distance, approach speed,
+  orientation and gaze, each with an explicit uncertainty, from a single
+  RGB-D camera mounted on the robot;
+\item a two-layer fuzzy engagement gate for gesture commands, and an IT2
+  variant whose FOU is set per person and per frame from measured perception
+  uncertainty, reducing exactly to the Type-1 system when uncertainty is
+  zero;
+\item an evaluation on a real Unitree Go2 in stationary and walking
+  scenarios with several people, comparing gesture-only, nearest-person,
+  gaze-only, learned, Type-1 and IT2 policies on identical inputs, with an
+  analysis of where measured uncertainty helps.
+\end{itemize}
+
+The remainder of the paper is organised as follows. Section~\ref{sec:background}
+reviews IT2 fuzzy systems, Section~\ref{sec:related} discusses related work,
+Section~\ref{sec:method} describes the method, Section~\ref{sec:experiments}
+the experimental setup, Section~\ref{sec:results} the results, and
+Section~\ref{sec:discussion} limitations and future work.

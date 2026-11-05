@@ -1,0 +1,24 @@
+\begin{abstract}
+Gesture interfaces let people command mobile robots where speech fails, but
+in shared spaces they answer \emph{what} a hand is doing and not \emph{whose}
+hand it is or whether the gesture is meant for the robot. A bystander waving
+at a friend can therefore stop or start the robot. We present a per-person
+engagement gate for gesture commands on a quadruped robot that uses an RGB-D
+camera mounted on the robot. Every visible person is tracked; hands are attributed to
+bodies and classified per person; and a two-layer fuzzy system decides whether
+each gesture is executed. The first layer estimates engagement from distance,
+approach speed, body and head orientation and eye gaze; the second combines
+engagement with gesture confidence. In the Interval Type-2 (IT2) variant, the
+footprint of uncertainty of every input is set at run time from that person's
+measured perception uncertainty, and the decision uses the lower bound of the
+type-reduced engagement interval, so a person who is hard to see must look
+more clearly engaged before being obeyed. We evaluate on
+\RES{N} recordings with a Unitree Go2 and \RES{P} participants
+(\RES{E} hand-labelled gesture episodes), comparing gesture-only,
+nearest-person, gaze-only, learned, Type-1 and IT2 policies on identical
+inputs. \RES{One sentence with the headline result: e.g. while the robot
+walked, IT2 reduced bystander false triggers from X\% to Y\% at Z\% commander
+recall.}
+\keywords{Interval type-2 fuzzy logic \and Human--robot interaction \and
+Gesture recognition \and Engagement estimation \and Quadruped robot}
+\end{abstract}

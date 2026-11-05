@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engagement-Aware Gesture Commands | Go2</title>
+<meta name="description" content="Fuzzy engagement-aware gesture command recognition for a quadruped robot in crowds. University of Moratuwa × Rysera × WSO2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaf7;--ink:#1d1c1a;--mute:#5d5a55;--line:#e3dfd7;--card:#ffffff;--accent:#c4441c;--accent2:#5146b8;--lav:#ecebfb;--ok:#1f7a4c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+a{color:var(--accent2)}
+nav{position:sticky;top:0;z-index:5;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .in{max-width:1560px;margin:auto;display:flex;gap:22px;padding:12px clamp(16px,3vw,48px);font-size:14px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none}nav a:hover{color:var(--accent)}
+nav b{font-family:"Source Serif 4",serif;color:var(--ink);margin-right:8px}
+.wrap{max-width:1560px;margin:auto;padding:0 clamp(16px,3vw,48px)}
+header{padding:40px 0 36px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+@media(max-width:980px){header{grid-template-columns:1fr}}
+.hero-media figure{max-width:none!important;margin:0!important}
+.logos{display:flex;gap:18px;justify-content:flex-start;align-items:center;flex-wrap:wrap;margin-bottom:28px}
+.logos img{height:32px;max-width:130px;object-fit:contain}
+h1{font:700 clamp(30px,3.2vw,46px)/1.12 "Source Serif 4",serif;margin:0 0 16px;letter-spacing:-.01em}
+.authors{font-size:17px;margin:6px 0}.aff{color:var(--mute);font-size:14px}
+.btns{display:flex;gap:10px;justify-content:flex-start;flex-wrap:wrap;margin:22px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:14px;font-weight:500}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.tldr{background:var(--lav);border-left:4px solid var(--accent2);padding:18px 22px;border-radius:8px;font-size:16px;margin:24px 0 0;text-align:left}
+section{padding:46px 0;border-top:1px solid var(--line)}
+h2{font:700 30px/1.2 "Source Serif 4",serif;margin:0 0 18px}
+h2 span{color:var(--accent);font-size:18px;margin-right:10px;font-family:Inter}
+h3{font:600 18px/1.3 Inter;margin:24px 0 8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid3 .ph{aspect-ratio:auto;min-height:110px}
+@media(max-width:780px){.grid2,.grid3{grid-template-columns:1fr}}
+figure{margin:0}figure img,figure video{width:100%;border-radius:10px;border:1px solid var(--line);background:#000;display:block}
+figcaption{font-size:13px;color:var(--mute);margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 24px}
+@media(max-width:780px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{display:block;font:700 30px/1.1 "Source Serif 4",serif}.stat span{font-size:13px;color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}th{font-weight:600;background:#f3f1ec}
+tr.hl td{color:var(--accent);font-weight:600}
+.pipe{display:flex;flex-direction:column;gap:8px}
+.pipe div{border:1.5px solid var(--ink);border-radius:12px;padding:10px 14px;background:var(--card);font-size:14px}
+.pipe .l{border-color:var(--accent);color:var(--accent);font-weight:600}
+.pipe .out{background:var(--lav);border-color:var(--accent2)}
+.arrow{text-align:center;color:var(--mute);border:none!important;background:none!important;padding:0!important}
+code,pre{font-family:"JetBrains Mono",monospace;font-size:13px}
+pre{background:#1d1c1a;color:#efe9df;padding:16px;border-radius:10px;overflow:auto}
+.key{background:var(--card);border:1.5px solid var(--accent);border-radius:12px;padding:18px 22px;font-size:18px}
+ul.clean{padding-left:18px}ul.clean li{margin:4px 0}
+.badge{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:#f3f1ec;border:1px solid var(--line);margin-right:6px}
+
+.ph{aspect-ratio:16/9;max-height:420px;border:1.5px dashed #d8d3c8;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--mute);background:repeating-linear-gradient(45deg,#f6f4ef,#f6f4ef 10px,#fbfaf7 10px,#fbfaf7 20px);font-size:14px;text-align:center;padding:10px}
+.ph b{color:var(--ink);font-size:16px}
+footer{padding:40px 0 60px;color:var(--mute);font-size:14px;border-top:1px solid var(--line);text-align:center}
+</style>
+<script>
+function ph(el){var d=document.createElement('div');d.className='ph';d.innerHTML='<b>'+(el.dataset.ph||el.alt||'Media')+'</b>'+(el.dataset.sub||'coming soon');el.replaceWith(d)}
+function hideMe(el){el.style.display='none'}
+</script>
+</head>
+<body>
+<nav><div class="in"><b>Go2 · Engagement</b><a href="#problem">Problem</a><a href="#method">Method</a><a href="#experiment">Experiment</a><a href="#results">Results</a><a href="#videos">Videos</a><a href="#team">Team</a><a href="#related">Related work</a><a href="#ethics">Ethics</a><a href="#cite">Cite</a></div></nav>
+
+<div class="wrap">
+<header>
+<div class="hero-text">
+  <div class="logos"><img onerror="hideMe(this)" src="assets/logo_uom.png" alt="University of Moratuwa"><img onerror="hideMe(this)" src="assets/logo_entc.png" alt="ENTC"><img onerror="hideMe(this)" src="assets/logo_ee.png" alt="EE"><img onerror="hideMe(this)" src="assets/logo_wso2.png" alt="WSO2"><img onerror="hideMe(this)" src="assets/logo_rysera.png" alt="Rysera"></div>
+  <h1>Fuzzy Engagement-Aware Gesture Command Recognition for a Quadruped Robot in Crowds</h1>
+  <div class="authors">Kaveeshwara Bandara · Rivikula Fernando · Agra Navarathna · Himasara Kulasinghe · Lasan Perera</div>
+  <div class="aff">Faculty of Engineering, University of Moratuwa · Rysera Innovations · in collaboration with WSO2</div>
+  <div class="btns">
+    <a class="btn" href="#videos">▶ Videos</a>
+    <a class="btn alt" href="poster.pdf">Poster (PDF)</a>
+    <a class="btn alt" href="https://github.com/KaveeshwaraBandara/go2-social-nav">Code</a>
+  </div>
+  <div class="tldr"><b>TL;DR</b> — In a crowd, a gesture-controlled robot obeys any hand it sees. We give every person their own engagement score and only act on gestures from people who are actually addressing the robot. An Interval Type-2 fuzzy gate widens its uncertainty band when a person is hard to see, so the robot asks for more evidence before obeying them.</div>
+</div>
+<div class="hero-media">
+  <figure style="max-width:880px;margin:auto"><video onerror="ph(this)" data-ph="Demo video" src="assets/{{HERO_VIDEO}}" autoplay muted loop playsinline></video>
+  <figcaption>{{HERO_CAP}}</figcaption></figure>
+</div>
+</header>
+
+<section id="problem">
+<h2><span>01</span>The problem</h2>
+<div class="grid2">
+<div>
+<p>Gesture pipelines answer <i>what</i> the hand is doing, never <i>whose</i> hand it is or <i>who it is meant for</i>. In a lobby or café that means a bystander waving at a friend can stop the robot or send it walking.</p>
+<p>We want three behaviours at once:</p>
+<ul class="clean">
+<li><b>Recognise each gesture separately</b> — if two people gesture at the same time, both are seen and attributed to the right person.</li>
+<li><b>Obey only gestures meant for the robot.</b></li>
+<li><b>Ignore the same person</b> when they turn and gesture at someone else.</li>
+</ul>
+</div>
+<figure><img onerror="ph(this)" data-ph="Go2 camera frame" src="assets/go2_frame.jpg" alt="Go2 camera frame with two people"><figcaption>Two people in view of the robot. Whose gesture should count?</figcaption></figure>
+</div>
+</section>
+
+<section id="method">
+<h2><span>02</span>Method: two fuzzy layers per person</h2>
+<div class="grid2">
+<div class="pipe">
+  <div><b>Sensor</b> · Unitree Go2 front camera, streamed over WebRTC</div><div class="arrow">↓</div>
+  <div><b>Per-person perception</b> · MediaPipe multi-person pose → track ID, distance (monocular, from shoulder width), approach speed, facing score from head + body yaw, each with a measured uncertainty σ</div><div class="arrow">↓</div>
+  <div><b>Gesture → person</b> · every hand matched to a body by wrist position → 18-class keypoint MLP → label + confidence, smoothed per person</div><div class="arrow">↓</div>
+  <div class="l">Layer 1 · Engagement &nbsp; E = f(distance, approach speed, facing)</div><div class="arrow">↓</div>
+  <div class="l">Layer 2 · Decision &nbsp; act ⇔ E<sub>low</sub> ≥ θ(cmd) ∧ conf ≥ θ<sub>c</sub></div><div class="arrow">↓</div>
+  <div class="out">Arbitration: STOP from any engaged person wins, else the most engaged person · Move / StopMove to the Go2</div>
+</div>
+<div>
+<h3>From Type-1 to Interval Type-2</h3>
+<p>Type-1 fuzzy logic treats every reading as exact. In our IT2 system each membership function has an <b>uncertain mean</b>, and the width of that band (the footprint of uncertainty) is set <b>per person, per frame</b> from what the sensors report: jitter in the distance estimate, how visible the face and shoulders are, and how stable the facing score has been.</p>
+<p>Karnik–Mendel type reduction gives an engagement interval [E<sub>low</sub>, E<sub>high</sub>]. We act on the lower bound, so a clearly visible person facing the robot is obeyed immediately, while a half-occluded or turning person must look much more engaged first. With zero uncertainty, the IT2 system reduces exactly to the Type-1 system, so the comparison isolates the effect of using measured uncertainty.</p>
+<p><span class="badge">9 rules</span><span class="badge">Hall's proxemic zones</span><span class="badge">STOP has a lower threshold (safety)</span></p>
+</div>
+</div>
+<figure style="margin-top:26px"><img onerror="ph(this)" data-ph="Figure" src="assets/fou.svg" alt="FOU and engagement curves" style="background:#fff"><figcaption>Left: the "facing HIGH" set for three uncertainty levels. Right: engagement needed to move the robot rises as the person becomes harder to see.</figcaption></figure>
+</section>
+
+<section id="experiment">
+<h2><span>03</span>Experiment</h2>
+<p>All four policies run on <b>the same features in the same frame</b>; one of them drives the dog and all are logged, so every comparison uses identical inputs.</p>
+<div class="grid3">
+<div class="card"><b>Gesture only</b><br><span class="aff">Any confident command gesture from anyone is executed (current practice).</span></div>
+<div class="card"><b>Nearest person</b><br><span class="aff">Only the closest person's gesture counts.</span></div>
+<div class="card"><b>Type-1 / IT2 engagement</b><br><span class="aff">Our two-layer fuzzy gate, without and with measured uncertainty.</span></div>
+</div>
+<h3>Scenarios on the real Go2</h3>
+<table>
+<tr><th>Take</th><th>Robot</th><th>What happens</th></tr>
+<tr><td>S1</td><td>stationary</td><td>One commander facing the dog</td></tr>
+<tr><td>S2</td><td>stationary</td><td>Bystanders gesture to each other beside the commander</td></tr>
+<tr><td>S3</td><td>stationary</td><td>Commander and bystander gesture at the same moment</td></tr>
+<tr><td>S4</td><td>stationary</td><td>Commander turns and gestures at a friend, then back at the dog</td></tr>
+<tr><td>S5</td><td>stationary</td><td>Two people gesture at the dog (STOP vs forward)</td></tr>
+<tr><td>S6</td><td>stationary</td><td>Bystanders walk across waving off-camera</td></tr>
+<tr><td>W1–W3</td><td>walking</td><td>Commander drives the dog through bystanders, nearby gestures, occlusion</td></tr>
+</table>
+<p class="aff" style="margin-top:12px">Every gesture episode (one person holding one command gesture) was labelled by hand as <i>meant for the robot</i> or <i>not</i>. Metrics: <b>bystander false-trigger rate</b> = share of not-for-robot episodes that the policy would have executed; <b>commander recall</b> = share of robot-directed episodes executed.</p>
+</section>
+
+<section id="results">
+<h2><span>04</span>Results</h2>
+<div class="stats">{{STATS}}</div>
+{{TABLE}}
+<div class="key" style="margin:22px 0"><b style="color:var(--accent)">Key finding.</b> {{KEY}}</div>
+{{FIGS_START}}<div class="grid2">
+<figure><img onerror="ph(this)" data-ph="Figure" data-sub="false triggers vs recall per policy" src="assets/bars.png" alt="false triggers vs recall" style="background:#fff"><figcaption>Bystander false triggers (red) against commander recall (blue) for each policy.</figcaption></figure>
+<figure><img onerror="ph(this)" data-ph="Figure" data-sub="engagement of robot-directed vs other gestures" src="assets/engagement_hist.png" alt="engagement histogram" style="background:#fff"><figcaption>IT2 lower-bound engagement for gestures meant for the robot vs. not. Dashed line: acceptance threshold for motion commands.</figcaption></figure>
+</div>
+</section>
+
+<section id="videos">
+<h2><span>05</span>Videos</h2>
+<div class="grid2"><figure><video onerror="ph(this)" data-ph="Project overview" src="assets/vid_overview.mp4" controls playsinline preload="metadata"></video><figcaption>The team explains the problem and the approach (with audio).</figcaption></figure>
+<div><p>A short walkthrough of why gesture control breaks in crowds, how per-person engagement fixes it, and what we tested on the Go2.</p><p class="aff">Recorded at Rysera, October 2026.</p></div></div>
+<h3>Development</h3>
+<div class="grid2">
+<figure><video onerror="ph(this)" data-ph="Simulation" src="assets/vid_sim_cafe.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>Simulation</b> · HuNavSim café crowd in ROS 2 / Gazebo. The same code and message format is used on the real robot.</figcaption></figure>
+<figure><video onerror="ph(this)" data-ph="First prototype" src="assets/vid_operator_lock.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>First prototype</b> · operator lock: hold an open palm to become the operator, then gesture-drive. Works for one user, which motivated per-person engagement.</figcaption></figure>
+</div>
+<h3>Real Go2 takes</h3>
+<div class="grid3">{{VIDEOS}}</div>
+</section>
+
+<section id="team">
+<h2><span>06</span>Team</h2>
+<figure style="max-width:1000px">{{TEAM_PHOTO}}<figcaption>The team at WSO2 — Kaveeshwara Bandara, Rivikula Fernando, Agra Navarathna, Himasara Kulasinghe and Lasan Perera.</figcaption></figure>
+</section>
+
+<section id="related">
+<h2><span>07</span>Related work &amp; what is new</h2>
+<ul class="clean">
+<li><b>Fuzzy engagement for robots</b> — Muñoz-Salinas et al. (2005) estimated each person's interest in a robot with a Type-1 fuzzy system from distance, angle and face orientation, essentially our Layer 1. Yun et al. (2012) used a fuzzy classifier to choose which of several people a robot should attend to. Both decide where the robot looks, not whether to execute a command, and neither models perception uncertainty.</li>
+<li><b>Gesture control of quadrupeds</b> — recent body/hand-gesture interfaces for legged robots (e.g. HyperPalm, 2022; non-verbal quadruped interfaces, 2024) assume one user in front of the robot.</li>
+<li><b>The single-user assumption</b> — a 2026 systematic review of proactive robots in groups finds most systems assume they are addressing one individual.</li>
+</ul>
+<p><b>Our contribution</b> is the combination: per-person gesture attribution in a crowd, gated by an Interval Type-2 engagement model whose uncertainty band is driven at runtime by measured perception uncertainty, evaluated against gesture-only, nearest-person and Type-1 policies on a real quadruped.</p>
+</section>
+
+<section id="ethics">
+<h2><span>08</span>Limitations &amp; ethics</h2>
+<ul class="clean">
+<li>Distance is monocular (from shoulder width); the Go2's built-in LiDAR is not fused yet.</li>
+<li>Small study recorded in one indoor space with a handful of volunteers; numbers are indicative, not definitive.</li>
+<li>Participants gave verbal consent to be recorded; faces are blurred in anything published beyond this page.</li>
+<li>Someone held the robot's remote with a kill switch during every walking take; speed was capped at 0.3 m/s.</li>
+</ul>
+</section>
+
+<section id="cite">
+<h2><span>09</span>Cite</h2>
+<pre>@misc{bandara2026engagement,
+  title  = {Fuzzy Engagement-Aware Gesture Command Recognition for a Quadruped Robot in Crowds},
+  author = {Bandara, Kaveeshwara and Fernando, Rivikula and Navarathna, Agra and Kulasinghe, Himasara and Perera, Lasan},
+  year   = {2026},
+  note   = {University of Moratuwa, Rysera Innovations and WSO2}
+}</pre>
+<p class="aff">Supported by WSO2. Built on the team's go2-social-nav and lidar-cam-fusion-lab repositories.</p>
+</section>
+</div>
+<footer>University of Moratuwa · Rysera Innovations · WSO2 · 2026</footer>
+</body>
+</html>

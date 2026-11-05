@@ -1,0 +1,33 @@
+# data never goes into git (too big; hand over on SSD / Google Drive)
+engage/takes/
+engage/dataset_report.md
+*.mp4
+*.npz
+!site/assets/*.mp4
+
+# environments / downloads
+engage/.venv/
+.venv/
+engage/go2_webrtc_connect/
+engage/models/pose_landmarker_full.task
+__pycache__/
+*.pyc
+
+# LaTeX build files
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz
+
+# rebuilt dataset lives outside the repo (../dataset_2026-11-03)
+dataset*/
+engage/Log/
+
+# handover data and dev take stay out of git (code only)
+handover/*/data/
+handover/*/*.csv.gz
+dev_data/

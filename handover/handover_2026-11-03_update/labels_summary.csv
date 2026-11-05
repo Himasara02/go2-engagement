@@ -1,0 +1,55 @@
+folder,take,label_file,clips,r,n,x,missed,commander_ids
+takes,D1_S1_r1,labels.json,2,2,0,0,,
+takes,D1_S1_r1,labels_B.json,2,2,0,0,,
+takes,D1_S1_r2,labels.json,8,8,0,0,,
+takes,D1_S1_r2,labels_B.json,8,8,0,0,,
+takes,D1_S1_r3,labels.json,9,9,0,0,,
+takes,D1_S1_r3,labels_B.json,9,9,0,0,,
+takes,D1_S2_r1,labels.json,6,2,4,0,,
+takes,D1_S2_r1,labels_B.json,6,2,4,0,,
+takes,D2_S3_r1,labels.json,10,0,10,0,,
+takes,D2_S3_r1,labels_B.json,10,0,10,0,,
+takes,D2_S5_r1,labels.json,2,1,1,0,,
+takes,D2_S5_r1,labels_B.json,2,0,2,0,,
+takes,D2_S5_r2,labels.json,4,4,0,0,,
+takes,D2_S5_r2,labels_B.json,4,4,0,0,,
+takes,D2_S6_r1,labels.json,2,0,2,0,,
+takes,D2_S6_r1,labels_B.json,2,0,2,0,,
+takes,D2_S6_r2,labels.json,1,0,1,0,,
+takes,D2_S6_r2,labels_B.json,1,0,1,0,,
+takes_v2,D1_S1_r2,labels.json,5,5,0,0,,
+takes_v2,D1_S1_r2,labels_B.json,5,5,0,0,,
+takes_v2,D1_S1_r3,labels.json,13,13,0,0,,
+takes_v2,D1_S1_r3,labels_B.json,13,13,0,0,,
+takes_v2,D1_S2_r1,labels.json,5,2,3,0,,
+takes_v2,D1_S2_r1,labels_B.json,5,1,4,0,,
+takes_v2,D2_S3_r1,labels.json,8,0,8,0,,
+takes_v2,D2_S3_r1,labels_B.json,8,0,8,0,,
+takes_v2,D2_S5_r2,labels.json,3,3,0,0,,
+takes_crop,D1_S1_r1,labels_cmd.json,6,5,1,0,,1
+takes_crop,D1_S1_r2,labels_cmd.json,14,14,0,0,,1
+takes_crop,D1_S1_r3,labels_cmd.json,19,19,0,0,,1
+takes_crop,D1_S2_r1,labels_cmd.json,54,27,27,0,,4
+takes_crop,D2_S2_r1,labels_cmd.json,42,21,21,0,,2 3 17 18 21
+takes_crop,D2_S3_r1,labels_cmd.json,70,11,59,0,,4 18
+takes_crop,D2_S3_r2,labels_cmd.json,26,0,26,0,,
+takes_crop,D2_S4_r1,labels_cmd.json,7,2,5,0,,34
+takes_crop,D2_S4_r2,labels_cmd.json,4,4,0,0,,9 17
+takes_crop,D2_S5_r1,labels_cmd.json,4,3,1,0,,12 23
+takes_crop,D2_S5_r2,labels_cmd.json,9,9,0,0,,4 11 13 14
+takes_crop,D2_S6_r1,labels_cmd.json,19,4,15,0,,37 38 56 60
+takes_crop,D2_S6_r2,labels_cmd.json,21,3,18,0,,45 52
+takes_crop2,D1_S1_r1,labels.json,5,4,0,1,1,
+takes_crop2,D1_S1_r2,labels.json,10,10,0,0,0,
+takes_crop2,D1_S1_r3,labels.json,22,22,0,0,0,
+takes_crop2,D1_S2_r1,labels.json,38,11,19,8,0,
+takes_crop2,D2_S1_r1,labels.json,0,0,0,0,0,
+takes_crop2,D2_S2_r1,labels.json,32,16,14,2,0,
+takes_crop2,D2_S3_r1,labels.json,65,15,50,0,0,
+takes_crop2,D2_S3_r2,labels.json,21,0,21,0,7,
+takes_crop2,D2_S4_r1,labels.json,7,1,6,0,3,
+takes_crop2,D2_S4_r2,labels.json,3,3,0,0,0,
+takes_crop2,D2_S5_r1,labels.json,3,2,1,0,0,
+takes_crop2,D2_S5_r2,labels.json,6,6,0,0,0,
+takes_crop2,D2_S6_r1,labels.json,19,7,12,0,0,
+takes_crop2,D2_S6_r2,labels.json,22,4,18,0,4,

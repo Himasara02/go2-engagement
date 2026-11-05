@@ -1,0 +1,46 @@
+\section{Background: Interval Type-2 Fuzzy Systems}
+\label{sec:background}
+
+A Type-1 fuzzy set assigns each input $x$ a crisp membership
+$\mu(x)\in[0,1]$~\cite{zadeh1975linguistic}. When the shape or position of
+that set is itself uncertain, a Type-2 set assigns a fuzzy membership
+instead. In the interval case, every primary membership is an interval
+$[\mulow(x),\muup(x)]$, and the region between the lower and upper membership
+functions is the footprint of uncertainty
+(FOU)~\cite{liang2000it2,mendel2006it2simple}.
+
+A common way to build an IT2 set is a Gaussian with an uncertain mean
+$m\in[m_1,m_2]$ and fixed spread $s$:
+\begin{equation}
+\muup(x)=
+\begin{cases}
+\mathcal{N}(x;m_1,s) & x<m_1\\
+1 & m_1\le x\le m_2\\
+\mathcal{N}(x;m_2,s) & x>m_2
+\end{cases}
+\qquad
+\mulow(x)=\min\{\mathcal{N}(x;m_1,s),\,\mathcal{N}(x;m_2,s)\},
+\label{eq:um-gauss}
+\end{equation}
+where $\mathcal{N}(x;m,s)=\exp\!\big(-\tfrac12((x-m)/s)^2\big)$. The width
+$m_2-m_1$ controls how much the system hedges; when it is zero the set
+collapses to a Type-1 Gaussian.
+
+For a rule base with consequents $y_i$, each rule $i$ fires with an interval
+$[\underline{f}_i,\overline{f}_i]$ obtained by applying a t-norm to the lower
+and to the upper memberships of its antecedents. Type reduction computes the
+centroid interval
+\begin{equation}
+y_l=\min_{f_i\in[\underline{f}_i,\overline{f}_i]}
+  \frac{\sum_i f_i y_i}{\sum_i f_i},\qquad
+y_r=\max_{f_i\in[\underline{f}_i,\overline{f}_i]}
+  \frac{\sum_i f_i y_i}{\sum_i f_i},
+\label{eq:km}
+\end{equation}
+which the Karnik--Mendel (KM) procedure finds exactly by locating one switch
+point in the sorted consequents~\cite{karnik2001centroid}. A crisp output is
+usually $(y_l+y_r)/2$, but the interval itself is informative: its width
+reflects how much the input uncertainty affects the conclusion~\cite{wu2002bounds}.
+IT2 controllers have been used in mobile robotics to cope with noisy
+sensors and changing environments~\cite{hagras2004hierarchical}, typically
+with an FOU chosen offline. In this work the FOU width is an online signal.
