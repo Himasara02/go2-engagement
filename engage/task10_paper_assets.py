@@ -360,8 +360,35 @@ addressed ($n$), bad detections ($x$, excluded), and robot-directed gestures nev
 """)
 
 
+def tab_gaze(gm):
+    nm = {"it2": "IT2 (depth, no gaze)", "gaze_only": "Gaze only$^\\dagger$", "type1_gaze": "Type-1 + gaze",
+          "it2_gaze": "\\textbf{IT2 + gaze}", "type1_mono": "Type-1, monocular distance",
+          "it2_mono": "IT2, monocular distance"}
+    rows = [f"{nm[m]} & {pct(gm['policies'][m]['false_trigger'])} & {pct(gm['policies'][m]['recall_clips'])}\\\\"
+            for m in nm]
+    c = gm["match"]
+    write("gaze", f"""\\begin{{table}}[t]
+\\centering
+\\caption{{Gaze as a fourth input and monocular instead of depth distance (same 14 takes and episodes as
+Table~\\ref{{tab:main}}). A face with iris landmarks was found in {100 * c['face'] / c['matched']:.0f}\\,\\% of
+person-frames. $^\\dagger$Threshold fitted leave-one-take-out.}}
+\\label{{tab:gaze}}
+\\small
+\\setlength{{\\tabcolsep}}{{3pt}}
+\\begin{{tabular}}{{lcc}}
+\\toprule
+Policy & FT $\\downarrow$ & Recall $\\uparrow$\\\\
+\\midrule
+{chr(10).join(rows)}
+\\bottomrule
+\\end{{tabular}}
+\\end{{table}}
+""")
+
+
 def main():
     an, bl, st = J("analysis"), J("baselines"), J("stats")
+    tab_gaze(J("gaze_mono"))
     fig_pipeline()
     fig_sweep(an)
     fig_noise(an)
