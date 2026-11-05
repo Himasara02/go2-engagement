@@ -1,9 +1,16 @@
 \section{Method}
 \label{sec:method}
 
-\TODO{Pipeline figure (Fig.~\ref{fig:pipeline}): camera $\rightarrow$
-per-person perception $\rightarrow$ Layer 1 $\rightarrow$ Layer 2
-$\rightarrow$ arbitration $\rightarrow$ Move/StopMove.}
+Fig.~\ref{fig:pipeline} gives an overview.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/pipeline}
+\caption{Pipeline. Every person in view gets their own features with measured uncertainty;
+the IT2 engagement system widens its sets by that uncertainty, and a gesture only reaches the
+robot if the lower engagement bound clears the threshold.}
+\label{fig:pipeline}
+\end{figure}
 
 \subsection{Per-person perception}
 Colour and depth frames from an Orbbec RGB-D camera mounted on the robot
@@ -39,7 +46,7 @@ probability of the winning label times its vote share.
 Distance uses three sets following Hall's proxemic
 zones~\cite{hall1966hidden} (NEAR, MID, FAR); facing and gaze have LOW and
 HIGH; approach speed has AWAY, STILL and TOWARD. The rule base
-\TODO{final rule table, e.g.\ Table~\ref{tab:rules}} maps these to
+(Table~\ref{tab:rules}) maps these to
 singleton engagement consequents, e.g.\ \emph{if facing is HIGH and distance
 is MID then $E=0.85$}; \emph{if approach is AWAY then $E=0.10$}.
 
@@ -64,6 +71,8 @@ the IT2 lower bound needs a clearer view before it crosses the acceptance
 threshold (dashed).}
 \label{fig:fou}
 \end{figure}
+
+\input{tables/rules}
 
 \subsection{Layer 2: decision and arbitration}
 A gesture with label $\ell$ and confidence $c$ from person $p$ is accepted if
