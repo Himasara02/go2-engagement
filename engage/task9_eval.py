@@ -92,7 +92,9 @@ def policy_sets(recs, efun):
 
 
 def mono_x(p):
-    return {"distance": p["mono_d"], "distance_sigma": p["mono_sd"], "facing": p["facing"],
+    # side-on people give a tiny shoulder width -> monocular d of 100s of metres, which overflows
+    # fuzzy.py's sigmoid (math.exp). Cap at 10 m: FAR is already saturated there, decisions unchanged.
+    return {"distance": min(p["mono_d"], 10.0), "distance_sigma": p["mono_sd"], "facing": p["facing"],
             "facing_sigma": p["facing_sigma"], "approach": p["mono_appr"]}
 
 
