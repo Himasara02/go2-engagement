@@ -1,0 +1,1348 @@
+{
+ "source": {
+  "takes": "/home/lasan-perera/Desktop/Go2_CVPR/data/dataset_2026-11-10/takes_crop3",
+  "labels": "/home/lasan-perera/Desktop/Go2_CVPR/data/labels_pack_2026-11-10/labels_final.csv"
+ },
+ "total": {
+  "recordings": 60,
+  "minutes": 75.83166666666666,
+  "people_mean": 2.430018379415055,
+  "people_max": 7,
+  "r": 1776,
+  "n": 2185,
+  "x": 2,
+  "clips": 3963,
+  "days": [
+   "D1",
+   "D2",
+   "D3",
+   "D4"
+  ],
+  "locations": [
+   "lab"
+  ],
+  "participant_codes": [
+   "P01",
+   "P02",
+   "P03",
+   "P04",
+   "P05",
+   "P06",
+   "P07",
+   "P08",
+   "P09"
+  ],
+  "label_source": {
+   "labels.json": 36,
+   "labels_cmd.json": 24
+  },
+  "fps_median": 12.999557402562075,
+  "fps_min": 3.2380316252595507,
+  "fps_max": 17.106089139987446,
+  "depth_recorded_all": true
+ },
+ "per_scenario": {
+  "S1": {
+   "recordings": 15,
+   "minutes": 17.851666666666667,
+   "people_mean": 1.1011116618282235,
+   "r": 305,
+   "n": 0,
+   "x": 0,
+   "clip_by_clip": 13
+  },
+  "S2": {
+   "recordings": 9,
+   "minutes": 13.24,
+   "people_mean": 3.6138392857142856,
+   "r": 270,
+   "n": 584,
+   "x": 1,
+   "clip_by_clip": 4
+  },
+  "S3": {
+   "recordings": 9,
+   "minutes": 11.565,
+   "people_mean": 3.388118214716526,
+   "r": 365,
+   "n": 915,
+   "x": 1,
+   "clip_by_clip": 4
+  },
+  "S4": {
+   "recordings": 9,
+   "minutes": 11.853333333333333,
+   "people_mean": 3.1090100111234706,
+   "r": 249,
+   "n": 371,
+   "x": 0,
+   "clip_by_clip": 9
+  },
+  "S5": {
+   "recordings": 9,
+   "minutes": 10.516666666666667,
+   "people_mean": 2.210624820040311,
+   "r": 307,
+   "n": 8,
+   "x": 0,
+   "clip_by_clip": 3
+  },
+  "S6": {
+   "recordings": 9,
+   "minutes": 10.805,
+   "people_mean": 2.360755035920552,
+   "r": 280,
+   "n": 307,
+   "x": 0,
+   "clip_by_clip": 3
+  }
+ },
+ "per_take": [
+  {
+   "take": "D1_S1_r1",
+   "day": "D1",
+   "scenario": "S1",
+   "duration_s": 44.9,
+   "frames": 476,
+   "fps": 10.83485401459854,
+   "people_mean": 1.031512605042017,
+   "people_max": 2,
+   "participant_codes": [
+    "P01"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D1_S1_r2",
+   "day": "D1",
+   "scenario": "S1",
+   "duration_s": 74.6,
+   "frames": 769,
+   "fps": 10.67111296373489,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P01"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D1_S1_r3",
+   "day": "D1",
+   "scenario": "S1",
+   "duration_s": 74.7,
+   "frames": 776,
+   "fps": 10.773165781645305,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P01"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D1_S2_r1",
+   "day": "D1",
+   "scenario": "S2",
+   "duration_s": 88.8,
+   "frames": 911,
+   "fps": 10.46422041557904,
+   "people_mean": 3.092206366630077,
+   "people_max": 5,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S1_r1",
+   "day": "D2",
+   "scenario": "S1",
+   "duration_s": 77.0,
+   "frames": 356,
+   "fps": 4.937687771225103,
+   "people_mean": 2.99438202247191,
+   "people_max": 4,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S2_r1",
+   "day": "D2",
+   "scenario": "S2",
+   "duration_s": 87.9,
+   "frames": 654,
+   "fps": 7.510149627942817,
+   "people_mean": 5.238532110091743,
+   "people_max": 7,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S3_r1",
+   "day": "D2",
+   "scenario": "S3",
+   "duration_s": 76.3,
+   "frames": 267,
+   "fps": 3.604336043360434,
+   "people_mean": 5.303370786516854,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S3_r2",
+   "day": "D2",
+   "scenario": "S3",
+   "duration_s": 77.6,
+   "frames": 311,
+   "fps": 4.194290353132188,
+   "people_mean": 5.032154340836013,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S4_r1",
+   "day": "D2",
+   "scenario": "S4",
+   "duration_s": 80.5,
+   "frames": 303,
+   "fps": 3.9239124785614052,
+   "people_mean": 4.772277227722772,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S4_r2",
+   "day": "D2",
+   "scenario": "S4",
+   "duration_s": 81.2,
+   "frames": 327,
+   "fps": 4.241698761319872,
+   "people_mean": 3.0642201834862384,
+   "people_max": 4,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S5_r1",
+   "day": "D2",
+   "scenario": "S5",
+   "duration_s": 68.0,
+   "frames": 268,
+   "fps": 4.070121951219512,
+   "people_mean": 3.708955223880597,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S5_r2",
+   "day": "D2",
+   "scenario": "S5",
+   "duration_s": 69.9,
+   "frames": 224,
+   "fps": 3.2380316252595507,
+   "people_mean": 4.214285714285714,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S6_r1",
+   "day": "D2",
+   "scenario": "S6",
+   "duration_s": 74.2,
+   "frames": 330,
+   "fps": 4.703157834546052,
+   "people_mean": 3.0757575757575757,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D2_S6_r2",
+   "day": "D2",
+   "scenario": "S6",
+   "duration_s": 71.0,
+   "frames": 457,
+   "fps": 6.521645857467713,
+   "people_mean": 2.9540481400437635,
+   "people_max": 6,
+   "participant_codes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r1",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 73.5,
+   "frames": 479,
+   "fps": 6.641471683432447,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r2",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 73.7,
+   "frames": 400,
+   "fps": 5.939621293319043,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r3",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.3,
+   "frames": 1223,
+   "fps": 16.972457950804873,
+   "people_mean": 1.0016353229762878,
+   "people_max": 2,
+   "participant_codes": [
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r4",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.4,
+   "frames": 1200,
+   "fps": 17.089022547817905,
+   "people_mean": 1.0016666666666667,
+   "people_max": 2,
+   "participant_codes": [
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r5",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.0,
+   "frames": 1203,
+   "fps": 16.707903589002253,
+   "people_mean": 1.0415627597672485,
+   "people_max": 2,
+   "participant_codes": [
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r6",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.3,
+   "frames": 1200,
+   "fps": 17.106089139987446,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r7",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.2,
+   "frames": 1217,
+   "fps": 16.894050960015562,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r8",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 73.2,
+   "frames": 1200,
+   "fps": 16.890654495252583,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S1_r9",
+   "day": "D3",
+   "scenario": "S1",
+   "duration_s": 72.3,
+   "frames": 1224,
+   "fps": 16.992247200377914,
+   "people_mean": 1,
+   "people_max": 1,
+   "participant_codes": [
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S2_r1",
+   "day": "D3",
+   "scenario": "S2",
+   "duration_s": 87.5,
+   "frames": 1041,
+   "fps": 11.955946933989377,
+   "people_mean": 4.053794428434198,
+   "people_max": 5,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S2_r2",
+   "day": "D3",
+   "scenario": "S2",
+   "duration_s": 87.9,
+   "frames": 1072,
+   "fps": 12.310344827586206,
+   "people_mean": 4.838619402985074,
+   "people_max": 7,
+   "participant_codes": [
+    "P06",
+    "P07",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S3_r1",
+   "day": "D3",
+   "scenario": "S3",
+   "duration_s": 74.4,
+   "frames": 830,
+   "fps": 11.20694316768507,
+   "people_mean": 3.5686746987951805,
+   "people_max": 5,
+   "participant_codes": [
+    "P07",
+    "P06",
+    "P05",
+    "P08",
+    "P09"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S3_r2",
+   "day": "D3",
+   "scenario": "S3",
+   "duration_s": 75.9,
+   "frames": 965,
+   "fps": 13.031958038176608,
+   "people_mean": 3.884974093264249,
+   "people_max": 4,
+   "participant_codes": [
+    "P07",
+    "P06",
+    "P08",
+    "P09"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S4_r1",
+   "day": "D3",
+   "scenario": "S4",
+   "duration_s": 78.3,
+   "frames": 917,
+   "fps": 11.904916626593712,
+   "people_mean": 3.145038167938931,
+   "people_max": 5,
+   "participant_codes": [
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S4_r2",
+   "day": "D3",
+   "scenario": "S4",
+   "duration_s": 77.2,
+   "frames": 1012,
+   "fps": 13.134134459240014,
+   "people_mean": 3.0770750988142295,
+   "people_max": 5,
+   "participant_codes": [
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S5_r1",
+   "day": "D3",
+   "scenario": "S5",
+   "duration_s": 69.9,
+   "frames": 1073,
+   "fps": 15.538934307415783,
+   "people_mean": 2.0419384902143523,
+   "people_max": 3,
+   "participant_codes": [
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D3_S6_r2",
+   "day": "D3",
+   "scenario": "S6",
+   "duration_s": 71.4,
+   "frames": 920,
+   "fps": 13.139270548875514,
+   "people_mean": 2.525,
+   "people_max": 6,
+   "participant_codes": [
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S1_r1",
+   "day": "D4",
+   "scenario": "S1",
+   "duration_s": 72.9,
+   "frames": 1200,
+   "fps": 16.997930193654486,
+   "people_mean": 1.4358333333333333,
+   "people_max": 2,
+   "participant_codes": [
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S1_r2",
+   "day": "D4",
+   "scenario": "S1",
+   "duration_s": 73.1,
+   "frames": 1200,
+   "fps": 16.94148898591271,
+   "people_mean": 1.105,
+   "people_max": 2,
+   "participant_codes": [
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S2_r1",
+   "day": "D4",
+   "scenario": "S2",
+   "duration_s": 89.5,
+   "frames": 400,
+   "fps": 4.816630049011324,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S2_r2",
+   "day": "D4",
+   "scenario": "S2",
+   "duration_s": 87.5,
+   "frames": 412,
+   "fps": 4.729465374789993,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S2_r3",
+   "day": "D4",
+   "scenario": "S2",
+   "duration_s": 88.5,
+   "frames": 1129,
+   "fps": 12.967156766947545,
+   "people_mean": 3.00088573959256,
+   "people_max": 4,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S2_r4",
+   "day": "D4",
+   "scenario": "S2",
+   "duration_s": 89.2,
+   "frames": 1192,
+   "fps": 13.696109660874665,
+   "people_mean": 3.3062080536912752,
+   "people_max": 4,
+   "participant_codes": [
+    "P06",
+    "P05",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S2_r5",
+   "day": "D4",
+   "scenario": "S2",
+   "duration_s": 87.6,
+   "frames": 1253,
+   "fps": 14.399576753654525,
+   "people_mean": 2.9744612928970473,
+   "people_max": 4,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S3_r1",
+   "day": "D4",
+   "scenario": "S3",
+   "duration_s": 87.6,
+   "frames": 417,
+   "fps": 4.786450662739322,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S3_r2",
+   "day": "D4",
+   "scenario": "S3",
+   "duration_s": 75.1,
+   "frames": 1000,
+   "fps": 13.72347001854523,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P06",
+    "P05",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S3_r3",
+   "day": "D4",
+   "scenario": "S3",
+   "duration_s": 75.6,
+   "frames": 939,
+   "fps": 12.681159420289854,
+   "people_mean": 2.9968051118210863,
+   "people_max": 3,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S3_r4",
+   "day": "D4",
+   "scenario": "S3",
+   "duration_s": 75.7,
+   "frames": 954,
+   "fps": 12.888654467751314,
+   "people_mean": 2.993710691823899,
+   "people_max": 4,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S3_r5",
+   "day": "D4",
+   "scenario": "S3",
+   "duration_s": 75.7,
+   "frames": 949,
+   "fps": 12.81600648911721,
+   "people_mean": 3.0105374077976816,
+   "people_max": 4,
+   "participant_codes": [
+    "P06",
+    "P07",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S4_r1",
+   "day": "D4",
+   "scenario": "S4",
+   "duration_s": 83.0,
+   "frames": 400,
+   "fps": 5.230180369127517,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S4_r2",
+   "day": "D4",
+   "scenario": "S4",
+   "duration_s": 78.0,
+   "frames": 1092,
+   "fps": 14.180617656233752,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P06",
+    "P05",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S4_r3",
+   "day": "D4",
+   "scenario": "S4",
+   "duration_s": 78.4,
+   "frames": 1120,
+   "fps": 14.538320622588316,
+   "people_mean": 2.9794642857142857,
+   "people_max": 4,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S4_r4",
+   "day": "D4",
+   "scenario": "S4",
+   "duration_s": 77.3,
+   "frames": 1000,
+   "fps": 13.326218902154338,
+   "people_mean": 3.038,
+   "people_max": 4,
+   "participant_codes": [
+    "P05",
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S4_r5",
+   "day": "D4",
+   "scenario": "S4",
+   "duration_s": 77.3,
+   "frames": 1021,
+   "fps": 13.250194855806702,
+   "people_mean": 3,
+   "people_max": 3,
+   "participant_codes": [
+    "P06",
+    "P07",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r1",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 72.9,
+   "frames": 315,
+   "fps": 4.558718912876203,
+   "people_mean": 2.580952380952381,
+   "people_max": 4,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r2",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 70.7,
+   "frames": 949,
+   "fps": 13.745704467353953,
+   "people_mean": 2,
+   "people_max": 2,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r3",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 69.1,
+   "frames": 1009,
+   "fps": 14.617805298954423,
+   "people_mean": 2,
+   "people_max": 2,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r4",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 69.8,
+   "frames": 1073,
+   "fps": 15.544567376709251,
+   "people_mean": 2.000931966449208,
+   "people_max": 3,
+   "participant_codes": [
+    "P06",
+    "P07",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r5",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 70.0,
+   "frames": 1089,
+   "fps": 15.77726218097448,
+   "people_mean": 2.090909090909091,
+   "people_max": 3,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S5_r6",
+   "day": "D4",
+   "scenario": "S5",
+   "duration_s": 70.7,
+   "frames": 946,
+   "fps": 13.700218913550893,
+   "people_mean": 2.1913319238900635,
+   "people_max": 4,
+   "participant_codes": [
+    "P06",
+    "P07",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r1",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 76.2,
+   "frames": 388,
+   "fps": 5.537827511698124,
+   "people_mean": 2.247422680412371,
+   "people_max": 4,
+   "participant_codes": [
+    "P06",
+    "P05",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r2",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 70.9,
+   "frames": 1000,
+   "fps": 14.575430405602566,
+   "people_mean": 2.257,
+   "people_max": 5,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r3",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 70.1,
+   "frames": 1004,
+   "fps": 14.332666476136039,
+   "people_mean": 2.3615537848605577,
+   "people_max": 5,
+   "participant_codes": [
+    "P07",
+    "P05",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r4",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 71.6,
+   "frames": 1000,
+   "fps": 14.426826098258385,
+   "people_mean": 2.515,
+   "people_max": 5,
+   "participant_codes": [
+    "P06",
+    "P05",
+    "P07"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r5",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 71.5,
+   "frames": 1000,
+   "fps": 14.437042068297758,
+   "people_mean": 2.058,
+   "people_max": 4,
+   "participant_codes": [
+    "P05",
+    "P07",
+    "P06"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  },
+  {
+   "take": "D4_S6_r6",
+   "day": "D4",
+   "scenario": "S6",
+   "duration_s": 71.4,
+   "frames": 1000,
+   "fps": 14.455007162390935,
+   "people_mean": 1.998,
+   "people_max": 4,
+   "participant_codes": [
+    "P07",
+    "P06",
+    "P05"
+   ],
+   "location": "lab",
+   "has_depth_recorded": true
+  }
+ ],
+ "per_take_labels": {
+  "D1_S1_r1": {
+   "r": 4
+  },
+  "D1_S1_r2": {
+   "r": 8
+  },
+  "D1_S1_r3": {
+   "r": 22
+  },
+  "D1_S2_r1": {
+   "r": 10,
+   "n": 23
+  },
+  "D2_S1_r1": {
+   "r": 1
+  },
+  "D2_S2_r1": {
+   "r": 32,
+   "n": 54
+  },
+  "D2_S3_r1": {
+   "n": 90,
+   "r": 18
+  },
+  "D2_S3_r2": {
+   "n": 48,
+   "r": 10,
+   "x": 1
+  },
+  "D2_S4_r1": {
+   "n": 14,
+   "r": 11
+  },
+  "D2_S4_r2": {
+   "r": 23,
+   "n": 10
+  },
+  "D2_S5_r1": {
+   "n": 1,
+   "r": 25
+  },
+  "D2_S5_r2": {
+   "r": 13
+  },
+  "D2_S6_r1": {
+   "n": 19,
+   "r": 14
+  },
+  "D2_S6_r2": {
+   "r": 16,
+   "n": 21
+  },
+  "D3_S1_r1": {
+   "r": 11
+  },
+  "D3_S1_r2": {
+   "r": 18
+  },
+  "D3_S1_r3": {
+   "r": 13
+  },
+  "D3_S1_r4": {
+   "r": 32
+  },
+  "D3_S1_r5": {
+   "r": 26
+  },
+  "D3_S1_r6": {
+   "r": 14
+  },
+  "D3_S1_r7": {
+   "r": 15
+  },
+  "D3_S1_r8": {
+   "r": 38
+  },
+  "D3_S1_r9": {
+   "r": 12
+  },
+  "D3_S2_r1": {
+   "r": 47,
+   "n": 109
+  },
+  "D3_S2_r2": {
+   "n": 141,
+   "x": 1,
+   "r": 69
+  },
+  "D3_S3_r1": {
+   "n": 100,
+   "r": 52
+  },
+  "D3_S3_r2": {
+   "n": 149,
+   "r": 22
+  },
+  "D3_S4_r1": {
+   "n": 27,
+   "r": 26
+  },
+  "D3_S4_r2": {
+   "n": 61,
+   "r": 26
+  },
+  "D3_S5_r1": {
+   "r": 33
+  },
+  "D3_S6_r2": {
+   "r": 34,
+   "n": 30
+  },
+  "D4_S1_r1": {
+   "r": 34
+  },
+  "D4_S1_r2": {
+   "r": 57
+  },
+  "D4_S2_r1": {
+   "n": 21,
+   "r": 7
+  },
+  "D4_S2_r2": {
+   "n": 52,
+   "r": 22
+  },
+  "D4_S2_r3": {
+   "r": 25,
+   "n": 60
+  },
+  "D4_S2_r4": {
+   "n": 55,
+   "r": 40
+  },
+  "D4_S2_r5": {
+   "n": 69,
+   "r": 18
+  },
+  "D4_S3_r1": {
+   "n": 60,
+   "r": 33
+  },
+  "D4_S3_r2": {
+   "n": 108,
+   "r": 57
+  },
+  "D4_S3_r3": {
+   "r": 63,
+   "n": 127
+  },
+  "D4_S3_r4": {
+   "n": 104,
+   "r": 66
+  },
+  "D4_S3_r5": {
+   "n": 129,
+   "r": 44
+  },
+  "D4_S4_r1": {
+   "n": 25,
+   "r": 16
+  },
+  "D4_S4_r2": {
+   "n": 49,
+   "r": 47
+  },
+  "D4_S4_r3": {
+   "n": 39,
+   "r": 35
+  },
+  "D4_S4_r4": {
+   "n": 58,
+   "r": 37
+  },
+  "D4_S4_r5": {
+   "n": 88,
+   "r": 28
+  },
+  "D4_S5_r1": {
+   "r": 16
+  },
+  "D4_S5_r2": {
+   "r": 51
+  },
+  "D4_S5_r3": {
+   "r": 56
+  },
+  "D4_S5_r4": {
+   "r": 34
+  },
+  "D4_S5_r5": {
+   "r": 72,
+   "n": 1
+  },
+  "D4_S5_r6": {
+   "n": 6,
+   "r": 7
+  },
+  "D4_S6_r1": {
+   "r": 31,
+   "n": 12
+  },
+  "D4_S6_r2": {
+   "r": 45,
+   "n": 37
+  },
+  "D4_S6_r3": {
+   "n": 33,
+   "r": 18
+  },
+  "D4_S6_r4": {
+   "r": 30,
+   "n": 59
+  },
+  "D4_S6_r5": {
+   "n": 53,
+   "r": 31
+  },
+  "D4_S6_r6": {
+   "r": 61,
+   "n": 43
+  }
+ },
+ "gesture_by_label": {
+  "r": {
+   "mute": 418,
+   "fist": 411,
+   "call": 370,
+   "palm": 310,
+   "one": 267
+  },
+  "n": {
+   "call": 958,
+   "mute": 837,
+   "fist": 305,
+   "one": 45,
+   "palm": 35,
+   "stop": 3,
+   "stop_inverted": 2
+  },
+  "x": {
+   "one": 1,
+   "call": 1
+  }
+ }
+}
