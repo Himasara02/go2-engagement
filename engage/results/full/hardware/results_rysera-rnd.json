@@ -1,0 +1,69 @@
+{
+ "system": {
+  "host": "rysera-rnd",
+  "board": "",
+  "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cores": 32,
+  "ram_gb": 60.4,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "delegate": "CPU",
+  "os": "Ubuntu 22.04.5 LTS",
+  "python": "3.12.16",
+  "mediapipe": "1.2.3",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4"
+ },
+ "frames": 150,
+ "mean_people": 3.0,
+ "perception_median_ms": {
+  "decode": 0.6162825000615157,
+  "people_strips": 72.15228549995345,
+  "people_whole_frame": 19.101812999963386,
+  "hands_per_person": 10.566525500015207,
+  "gaze_per_person": 4.3171149999921,
+  "facing_distance_per_person": 0.17007049999998952
+ },
+ "per_person_perception_ms": 15.053711000007295,
+ "frame_ms_strips": 117.92970100003686,
+ "frame_ms_whole_frame": 64.87922850004679,
+ "fps_strips": 8.479628045522539,
+ "fps_whole_frame": 15.413253565419305,
+ "decision_us_per_person": {
+  "gesture_only": 0.06402540000181034,
+  "nearest": 0.11731242292486514,
+  "distance_only": 0.06811959999595274,
+  "facing_only": 0.06343840000226919,
+  "gaze_only": 0.06291180000062013,
+  "logreg": 1.4175805999911972,
+  "type1": 7.596462799983783,
+  "type1_gaze": 8.321826199994575,
+  "it2": 19.0936038000018,
+  "it2_gaze": 23.601653400010036
+ },
+ "our_end": {
+  "gesture_only": {
+   "ms_per_frame": 0.004514933333060374,
+   "us_per_person": 1.5049777776867914
+  },
+  "facing_only": {
+   "ms_per_frame": 0.03210043333335003,
+   "us_per_person": 10.700144444450011
+  },
+  "logreg": {
+   "ms_per_frame": 0.2324638466666329,
+   "us_per_person": 77.48794888887763
+  },
+  "type1_gaze": {
+   "ms_per_frame": 0.2919628266666526,
+   "us_per_person": 97.32094222221752
+  },
+  "it2_gaze": {
+   "ms_per_frame": 0.3483745066667628,
+   "us_per_person": 116.1248355555876
+  }
+ },
+ "our_end_person_frames": 450,
+ "decision_rows": 5000,
+ "decision_frames_nearest": 5000,
+ "gate_share_of_frame_pct_whole": 0.1091334805252486
+}

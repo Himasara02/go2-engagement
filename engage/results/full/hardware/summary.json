@@ -1,0 +1,121 @@
+{
+ "devices": {
+  "Raspberry Pi 5": {
+   "hardware": "Raspberry Pi 5",
+   "cores": 4,
+   "ram_gb": 3.9,
+   "gpu": null,
+   "people": 3.006666666666667,
+   "frames": 150,
+   "networks_ms": 474.32448289024,
+   "networks_strips_ms": 859.1810028905522,
+   "ours_ms": 1.4916623533311697,
+   "type1_ms": 1.2991305533341801,
+   "logreg_ms": 1.0652421466663025,
+   "facing_only_ms": 0.1554344466664285,
+   "gesture_only_ms": 0.021256140001545038,
+   "gate_us_per_person": 91.53596639998796,
+   "perception_ms": {
+    "decode": 4.6107145001315075,
+    "people_strips": 508.9791855002659,
+    "people_whole_frame": 124.12266549995365,
+    "hands_per_person": 89.2107133333108,
+    "gaze_per_person": 25.73089516674069,
+    "facing_distance_per_person": 0.41202100002616737
+   },
+   "fps": 2.1016520981819524,
+   "ours_share_pct": 0.31349553146574816,
+   "ours_max_fps": 670.3929999753678,
+   "ours_core_pct_at_30fps": 4.474987059993509,
+   "versions": {
+    "python": "3.12.3",
+    "mediapipe": "1.2.3",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "os": "Ubuntu 24.04.5 LTS"
+   }
+  },
+  "Laptop CPU": {
+   "hardware": "AMD Ryzen 7 5825U with Radeon Graphics",
+   "cores": 16,
+   "ram_gb": 13.5,
+   "gpu": null,
+   "people": 3.0,
+   "frames": 150,
+   "networks_ms": 160.72632749273907,
+   "networks_strips_ms": 287.65060249133967,
+   "ours_ms": 0.9480520666693337,
+   "type1_ms": 0.8272705732573135,
+   "logreg_ms": 0.6774495400410766,
+   "facing_only_ms": 0.09603693334308143,
+   "gesture_only_ms": 0.008858539998376122,
+   "gate_us_per_person": 44.52134619932622,
+   "perception_ms": {
+    "decode": 1.1529580006026663,
+    "people_strips": 169.84065099677537,
+    "people_whole_frame": 42.91637599817477,
+    "hands_per_person": 28.820644164322097,
+    "gaze_per_person": 10.065020333665114,
+    "facing_distance_per_person": 0.30709933586573845
+   },
+   "fps": 6.185271919553233,
+   "ours_share_pct": 0.5863959826244239,
+   "ours_max_fps": 1054.794388575269,
+   "ours_core_pct_at_30fps": 2.844156200008001,
+   "versions": {
+    "python": "3.12.16",
+    "mediapipe": "1.2.3",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "os": "Ubuntu 24.04.5 LTS"
+   }
+  },
+  "Desktop CPU": {
+   "hardware": "AMD Ryzen 9 9950X 16-Core Processor",
+   "cores": 32,
+   "ram_gb": 60.4,
+   "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+   "people": 3.0,
+   "frames": 150,
+   "networks_ms": 64.36901700004682,
+   "networks_strips_ms": 117.41948950003689,
+   "ours_ms": 0.3483745066667628,
+   "type1_ms": 0.2919628266666526,
+   "logreg_ms": 0.2324638466666329,
+   "facing_only_ms": 0.03210043333335003,
+   "gesture_only_ms": 0.004514933333060374,
+   "gate_us_per_person": 23.601653400010036,
+   "perception_ms": {
+    "decode": 0.6162825000615157,
+    "people_strips": 72.15228549995345,
+    "people_whole_frame": 19.101812999963386,
+    "hands_per_person": 10.566525500015207,
+    "gaze_per_person": 4.3171149999921,
+    "facing_distance_per_person": 0.17007049999998952
+   },
+   "fps": 15.451797062869307,
+   "ours_share_pct": 0.5383012178892028,
+   "ours_max_fps": 2870.474104342396,
+   "ours_core_pct_at_30fps": 1.0451235200002884,
+   "versions": {
+    "python": "3.12.16",
+    "mediapipe": "1.2.3",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "os": "Ubuntu 22.04.5 LTS"
+   }
+  }
+ },
+ "gpu_delegate": [
+  {
+   "device": "Laptop CPU",
+   "gpu": "integrated graphics",
+   "error": "ulators/tensor/inference_runner_litert.cc:1672]\n\u2514 ERROR: [third_party/odml/litert/litert/cc/litert_tensor_buffer.h:101]\n\u2514 Failed to create custom tensor buffer."
+  },
+  {
+   "device": "Desktop CPU",
+   "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+   "error": "ulators/tensor/inference_runner_litert.cc:1672]\n\u2514 ERROR: [third_party/odml/litert/litert/cc/litert_tensor_buffer.h:101]\n\u2514 Failed to create custom tensor buffer."
+  }
+ ]
+}

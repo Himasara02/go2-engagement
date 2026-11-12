@@ -1,0 +1,19 @@
+{
+ "take": "D4_S3_r5",
+ "frames": 150,
+ "mean_people": 3.02,
+ "cpu": "AMD Ryzen 7 5825U with Radeon Graphics",
+ "median_ms": {
+  "decode": 1.1653845003820607,
+  "people_strips": 164.27583000040613,
+  "people_whole_frame": 41.13946350025799,
+  "hands_per_person": 27.50940750047448,
+  "gaze_per_person": 9.282024499649804,
+  "gate_per_person": 0.08702049975302847
+ },
+ "per_person_ms": 36.87845249987732,
+ "frame_total_ms_strips": 276.8141410504177,
+ "frame_total_ms_whole_frame": 153.67777455026956,
+ "fps_strips": 3.6125322073696537,
+ "fps_whole_frame": 6.507121819836673
+}

@@ -1,0 +1,612 @@
+{
+ "total": {
+  "frames": 50056,
+  "people": 121637,
+  "matched": 121637,
+  "faces": 87195,
+  "face_rate": 0.716846025469224,
+  "source": "data/cues_2026-11-10/cues_summary.json (go2-engagement/engage/full_cues.py)"
+ },
+ "per_take": {
+  "D2_S5_r2": {
+   "take": "D2_S5_r2",
+   "frames": 224,
+   "people": 944,
+   "matched": 944,
+   "faces": 802,
+   "log_frames": 224,
+   "iou_median": 0.9937637353901998,
+   "seconds": 59.0
+  },
+  "D1_S1_r1": {
+   "take": "D1_S1_r1",
+   "frames": 476,
+   "people": 491,
+   "matched": 491,
+   "faces": 438,
+   "log_frames": 476,
+   "iou_median": 0.9948369132356051,
+   "seconds": 393.2
+  },
+  "D1_S1_r2": {
+   "take": "D1_S1_r2",
+   "frames": 769,
+   "people": 769,
+   "matched": 769,
+   "faces": 769,
+   "log_frames": 769,
+   "iou_median": 0.9943472484917941,
+   "seconds": 659.7
+  },
+  "D1_S1_r3": {
+   "take": "D1_S1_r3",
+   "frames": 776,
+   "people": 776,
+   "matched": 776,
+   "faces": 776,
+   "log_frames": 776,
+   "iou_median": 0.9944981622869238,
+   "seconds": 686.6
+  },
+  "D1_S2_r1": {
+   "take": "D1_S2_r1",
+   "frames": 911,
+   "people": 2817,
+   "matched": 2817,
+   "faces": 1334,
+   "log_frames": 911,
+   "iou_median": 0.9943738490919954,
+   "seconds": 1259.8
+  },
+  "D2_S1_r1": {
+   "take": "D2_S1_r1",
+   "frames": 356,
+   "people": 1066,
+   "matched": 1066,
+   "faces": 1049,
+   "log_frames": 356,
+   "iou_median": 0.9921093115923957,
+   "seconds": 471.4
+  },
+  "D2_S2_r1": {
+   "take": "D2_S2_r1",
+   "frames": 654,
+   "people": 3426,
+   "matched": 3426,
+   "faces": 2149,
+   "log_frames": 654,
+   "iou_median": 0.9922534865305461,
+   "seconds": 1186.8
+  },
+  "D2_S3_r1": {
+   "take": "D2_S3_r1",
+   "frames": 267,
+   "people": 1416,
+   "matched": 1416,
+   "faces": 894,
+   "log_frames": 267,
+   "iou_median": 0.9937666175886714,
+   "seconds": 455.9
+  },
+  "D2_S3_r2": {
+   "take": "D2_S3_r2",
+   "frames": 311,
+   "people": 1565,
+   "matched": 1565,
+   "faces": 972,
+   "log_frames": 311,
+   "iou_median": 0.9936005618471156,
+   "seconds": 522.3
+  },
+  "D2_S4_r1": {
+   "take": "D2_S4_r1",
+   "frames": 303,
+   "people": 1446,
+   "matched": 1446,
+   "faces": 1156,
+   "log_frames": 303,
+   "iou_median": 0.9932104797267918,
+   "seconds": 496.8
+  },
+  "D2_S4_r2": {
+   "take": "D2_S4_r2",
+   "frames": 327,
+   "people": 1002,
+   "matched": 1002,
+   "faces": 794,
+   "log_frames": 327,
+   "iou_median": 0.9937595725345831,
+   "seconds": 514.8
+  },
+  "D2_S5_r1": {
+   "take": "D2_S5_r1",
+   "frames": 268,
+   "people": 994,
+   "matched": 994,
+   "faces": 779,
+   "log_frames": 268,
+   "iou_median": 0.993109985111215,
+   "seconds": 376.5
+  },
+  "D2_S6_r1": {
+   "take": "D2_S6_r1",
+   "frames": 330,
+   "people": 1015,
+   "matched": 1015,
+   "faces": 547,
+   "log_frames": 330,
+   "iou_median": 0.9938683774801265,
+   "seconds": 433.3
+  },
+  "D2_S6_r2": {
+   "take": "D2_S6_r2",
+   "frames": 457,
+   "people": 1350,
+   "matched": 1350,
+   "faces": 709,
+   "log_frames": 457,
+   "iou_median": 0.9936468755768628,
+   "seconds": 602.8
+  },
+  "D3_S1_r1": {
+   "take": "D3_S1_r1",
+   "frames": 479,
+   "people": 479,
+   "matched": 479,
+   "faces": 479,
+   "log_frames": 479,
+   "iou_median": 0.9932386492582138,
+   "seconds": 302.1
+  },
+  "D3_S1_r2": {
+   "take": "D3_S1_r2",
+   "frames": 400,
+   "people": 400,
+   "matched": 400,
+   "faces": 400,
+   "log_frames": 400,
+   "iou_median": 0.9953643546125077,
+   "seconds": 273.5
+  },
+  "D3_S1_r3": {
+   "take": "D3_S1_r3",
+   "frames": 1223,
+   "people": 1225,
+   "matched": 1225,
+   "faces": 1223,
+   "log_frames": 1223,
+   "iou_median": 0.9935063853719439,
+   "seconds": 813.1
+  },
+  "D3_S1_r4": {
+   "take": "D3_S1_r4",
+   "frames": 1200,
+   "people": 1202,
+   "matched": 1202,
+   "faces": 1200,
+   "log_frames": 1200,
+   "iou_median": 0.9942992044721871,
+   "seconds": 994.7
+  },
+  "D3_S1_r5": {
+   "take": "D3_S1_r5",
+   "frames": 1203,
+   "people": 1253,
+   "matched": 1253,
+   "faces": 1218,
+   "log_frames": 1203,
+   "iou_median": 0.9911624411109232,
+   "seconds": 1103.5
+  },
+  "D3_S1_r6": {
+   "take": "D3_S1_r6",
+   "frames": 1200,
+   "people": 1200,
+   "matched": 1200,
+   "faces": 1200,
+   "log_frames": 1200,
+   "iou_median": 0.9941056627385468,
+   "seconds": 985.8
+  },
+  "D3_S1_r7": {
+   "take": "D3_S1_r7",
+   "frames": 1217,
+   "people": 1217,
+   "matched": 1217,
+   "faces": 1217,
+   "log_frames": 1217,
+   "iou_median": 0.9939906115986404,
+   "seconds": 867.3
+  },
+  "D3_S1_r8": {
+   "take": "D3_S1_r8",
+   "frames": 1200,
+   "people": 1200,
+   "matched": 1200,
+   "faces": 1200,
+   "log_frames": 1200,
+   "iou_median": 0.9903446673481471,
+   "seconds": 832.2
+  },
+  "D3_S1_r9": {
+   "take": "D3_S1_r9",
+   "frames": 1224,
+   "people": 1224,
+   "matched": 1224,
+   "faces": 1224,
+   "log_frames": 1224,
+   "iou_median": 0.9950068543603965,
+   "seconds": 986.3
+  },
+  "D3_S2_r1": {
+   "take": "D3_S2_r1",
+   "frames": 1041,
+   "people": 4220,
+   "matched": 4220,
+   "faces": 3078,
+   "log_frames": 1041,
+   "iou_median": 0.9939784061343327,
+   "seconds": 1334.2
+  },
+  "D3_S2_r2": {
+   "take": "D3_S2_r2",
+   "frames": 1072,
+   "people": 5187,
+   "matched": 5187,
+   "faces": 3120,
+   "log_frames": 1072,
+   "iou_median": 0.9944066654855925,
+   "seconds": 1550.8
+  },
+  "D3_S3_r1": {
+   "take": "D3_S3_r1",
+   "frames": 830,
+   "people": 2962,
+   "matched": 2962,
+   "faces": 1562,
+   "log_frames": 830,
+   "iou_median": 0.9941582601029946,
+   "seconds": 1054.8
+  },
+  "D3_S3_r2": {
+   "take": "D3_S3_r2",
+   "frames": 965,
+   "people": 3749,
+   "matched": 3749,
+   "faces": 2069,
+   "log_frames": 965,
+   "iou_median": 0.9942592954096025,
+   "seconds": 1108.5
+  },
+  "D3_S4_r1": {
+   "take": "D3_S4_r1",
+   "frames": 917,
+   "people": 2884,
+   "matched": 2884,
+   "faces": 1686,
+   "log_frames": 917,
+   "iou_median": 0.9931141501092247,
+   "seconds": 944.6
+  },
+  "D3_S4_r2": {
+   "take": "D3_S4_r2",
+   "frames": 1012,
+   "people": 3114,
+   "matched": 3114,
+   "faces": 1947,
+   "log_frames": 1012,
+   "iou_median": 0.9930052407280726,
+   "seconds": 1036.4
+  },
+  "D3_S5_r1": {
+   "take": "D3_S5_r1",
+   "frames": 1073,
+   "people": 2191,
+   "matched": 2191,
+   "faces": 2185,
+   "log_frames": 1073,
+   "iou_median": 0.9930711467912292,
+   "seconds": 1139.3
+  },
+  "D3_S6_r2": {
+   "take": "D3_S6_r2",
+   "frames": 920,
+   "people": 2323,
+   "matched": 2323,
+   "faces": 1408,
+   "log_frames": 920,
+   "iou_median": 0.9942898756808186,
+   "seconds": 930.1
+  },
+  "D4_S1_r1": {
+   "take": "D4_S1_r1",
+   "frames": 1200,
+   "people": 1723,
+   "matched": 1723,
+   "faces": 1320,
+   "log_frames": 1200,
+   "iou_median": 0.992643910809284,
+   "seconds": 916.9
+  },
+  "D4_S1_r2": {
+   "take": "D4_S1_r2",
+   "frames": 1200,
+   "people": 1326,
+   "matched": 1326,
+   "faces": 1201,
+   "log_frames": 1200,
+   "iou_median": 0.9932670826718719,
+   "seconds": 982.0
+  },
+  "D4_S2_r1": {
+   "take": "D4_S2_r1",
+   "frames": 400,
+   "people": 1200,
+   "matched": 1200,
+   "faces": 1011,
+   "log_frames": 400,
+   "iou_median": 0.9944835670299601,
+   "seconds": 428.4
+  },
+  "D4_S2_r2": {
+   "take": "D4_S2_r2",
+   "frames": 412,
+   "people": 1236,
+   "matched": 1236,
+   "faces": 931,
+   "log_frames": 412,
+   "iou_median": 0.9948152946011273,
+   "seconds": 461.8
+  },
+  "D4_S2_r3": {
+   "take": "D4_S2_r3",
+   "frames": 1129,
+   "people": 3388,
+   "matched": 3388,
+   "faces": 2071,
+   "log_frames": 1129,
+   "iou_median": 0.9944043388673505,
+   "seconds": 1266.2
+  },
+  "D4_S2_r4": {
+   "take": "D4_S2_r4",
+   "frames": 1192,
+   "people": 3941,
+   "matched": 3941,
+   "faces": 2785,
+   "log_frames": 1192,
+   "iou_median": 0.9940593651608015,
+   "seconds": 1489.6
+  },
+  "D4_S2_r5": {
+   "take": "D4_S2_r5",
+   "frames": 1253,
+   "people": 3727,
+   "matched": 3727,
+   "faces": 2793,
+   "log_frames": 1253,
+   "iou_median": 0.993117215066881,
+   "seconds": 1534.0
+  },
+  "D4_S3_r1": {
+   "take": "D4_S3_r1",
+   "frames": 417,
+   "people": 1251,
+   "matched": 1251,
+   "faces": 690,
+   "log_frames": 417,
+   "iou_median": 0.9936457824280136,
+   "seconds": 450.4
+  },
+  "D4_S3_r2": {
+   "take": "D4_S3_r2",
+   "frames": 1000,
+   "people": 3000,
+   "matched": 3000,
+   "faces": 2004,
+   "log_frames": 1000,
+   "iou_median": 0.993608721241462,
+   "seconds": 1181.1
+  },
+  "D4_S3_r3": {
+   "take": "D4_S3_r3",
+   "frames": 939,
+   "people": 2814,
+   "matched": 2814,
+   "faces": 2600,
+   "log_frames": 939,
+   "iou_median": 0.9935506181387292,
+   "seconds": 1093.1
+  },
+  "D4_S3_r4": {
+   "take": "D4_S3_r4",
+   "frames": 954,
+   "people": 2856,
+   "matched": 2856,
+   "faces": 2623,
+   "log_frames": 954,
+   "iou_median": 0.9938918014840881,
+   "seconds": 1149.5
+  },
+  "D4_S3_r5": {
+   "take": "D4_S3_r5",
+   "frames": 949,
+   "people": 2857,
+   "matched": 2857,
+   "faces": 2064,
+   "log_frames": 949,
+   "iou_median": 0.9940188071707374,
+   "seconds": 1200.5
+  },
+  "D4_S4_r1": {
+   "take": "D4_S4_r1",
+   "frames": 400,
+   "people": 1200,
+   "matched": 1200,
+   "faces": 696,
+   "log_frames": 400,
+   "iou_median": 0.9930714574293873,
+   "seconds": 454.1
+  },
+  "D4_S4_r2": {
+   "take": "D4_S4_r2",
+   "frames": 1092,
+   "people": 3276,
+   "matched": 3276,
+   "faces": 1201,
+   "log_frames": 1092,
+   "iou_median": 0.9936981401142138,
+   "seconds": 1133.9
+  },
+  "D4_S4_r3": {
+   "take": "D4_S4_r3",
+   "frames": 1120,
+   "people": 3337,
+   "matched": 3337,
+   "faces": 1875,
+   "log_frames": 1120,
+   "iou_median": 0.9924533687204374,
+   "seconds": 1273.6
+  },
+  "D4_S4_r4": {
+   "take": "D4_S4_r4",
+   "frames": 1000,
+   "people": 3038,
+   "matched": 3038,
+   "faces": 1298,
+   "log_frames": 1000,
+   "iou_median": 0.9937171010272412,
+   "seconds": 1219.3
+  },
+  "D4_S4_r5": {
+   "take": "D4_S4_r5",
+   "frames": 1021,
+   "people": 3063,
+   "matched": 3063,
+   "faces": 1806,
+   "log_frames": 1021,
+   "iou_median": 0.9938483242067908,
+   "seconds": 1205.6
+  },
+  "D4_S5_r1": {
+   "take": "D4_S5_r1",
+   "frames": 315,
+   "people": 813,
+   "matched": 813,
+   "faces": 786,
+   "log_frames": 315,
+   "iou_median": 0.9943504165673756,
+   "seconds": 359.3
+  },
+  "D4_S5_r2": {
+   "take": "D4_S5_r2",
+   "frames": 949,
+   "people": 1898,
+   "matched": 1898,
+   "faces": 1898,
+   "log_frames": 949,
+   "iou_median": 0.9952643746571532,
+   "seconds": 849.7
+  },
+  "D4_S5_r3": {
+   "take": "D4_S5_r3",
+   "frames": 1009,
+   "people": 2018,
+   "matched": 2018,
+   "faces": 2018,
+   "log_frames": 1009,
+   "iou_median": 0.9912900568344971,
+   "seconds": 856.1
+  },
+  "D4_S5_r4": {
+   "take": "D4_S5_r4",
+   "frames": 1073,
+   "people": 2147,
+   "matched": 2147,
+   "faces": 2146,
+   "log_frames": 1073,
+   "iou_median": 0.9931005585966836,
+   "seconds": 855.1
+  },
+  "D4_S5_r5": {
+   "take": "D4_S5_r5",
+   "frames": 1089,
+   "people": 2277,
+   "matched": 2277,
+   "faces": 2215,
+   "log_frames": 1089,
+   "iou_median": 0.9913361238081129,
+   "seconds": 828.3
+  },
+  "D4_S5_r6": {
+   "take": "D4_S5_r6",
+   "frames": 946,
+   "people": 2073,
+   "matched": 2073,
+   "faces": 1926,
+   "log_frames": 946,
+   "iou_median": 0.9928296224798426,
+   "seconds": 798.4
+  },
+  "D4_S6_r1": {
+   "take": "D4_S6_r1",
+   "frames": 388,
+   "people": 872,
+   "matched": 872,
+   "faces": 558,
+   "log_frames": 388,
+   "iou_median": 0.9937452824952597,
+   "seconds": 353.8
+  },
+  "D4_S6_r2": {
+   "take": "D4_S6_r2",
+   "frames": 1000,
+   "people": 2257,
+   "matched": 2257,
+   "faces": 1352,
+   "log_frames": 1000,
+   "iou_median": 0.9936849505229266,
+   "seconds": 748.9
+  },
+  "D4_S6_r3": {
+   "take": "D4_S6_r3",
+   "frames": 1004,
+   "people": 2371,
+   "matched": 2371,
+   "faces": 1491,
+   "log_frames": 1004,
+   "iou_median": 0.9931430122441747,
+   "seconds": 739.1
+  },
+  "D4_S6_r4": {
+   "take": "D4_S6_r4",
+   "frames": 1000,
+   "people": 2515,
+   "matched": 2515,
+   "faces": 1563,
+   "log_frames": 1000,
+   "iou_median": 0.9941647783224709,
+   "seconds": 720.6
+  },
+  "D4_S6_r5": {
+   "take": "D4_S6_r5",
+   "frames": 1000,
+   "people": 2058,
+   "matched": 2058,
+   "faces": 1281,
+   "log_frames": 1000,
+   "iou_median": 0.9935626990530173,
+   "seconds": 569.6
+  },
+  "D4_S6_r6": {
+   "take": "D4_S6_r6",
+   "frames": 1000,
+   "people": 1998,
+   "matched": 1998,
+   "faces": 1408,
+   "log_frames": 1000,
+   "iou_median": 0.9939352861678461,
+   "seconds": 552.7
+  }
+ }
+}

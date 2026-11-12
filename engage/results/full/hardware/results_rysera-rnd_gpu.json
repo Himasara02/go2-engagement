@@ -1,0 +1,17 @@
+{
+ "system": {
+  "host": "rysera-rnd",
+  "board": "",
+  "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cores": 32,
+  "ram_gb": 60.4,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "delegate": "GPU",
+  "os": "Ubuntu 22.04.5 LTS",
+  "python": "3.12.16",
+  "mediapipe": "1.2.3",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4"
+ },
+ "error": "ValueError: er_singleposelandmarksdetectorgraph__mediapipe_tasks_core_inferencesubgraph__InferenceCalculator\" failed: ERROR: [third_party/mediapipe/calculators/tensor/inference_runner_litert.cc:1672]\n\u2514 ERROR: [third_party/odml/litert/litert/cc/litert_tensor_buffer.h:101]\n\u2514 Failed to create custom tensor buffer."
+}

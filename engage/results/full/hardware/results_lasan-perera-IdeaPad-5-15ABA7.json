@@ -1,0 +1,69 @@
+{
+ "system": {
+  "host": "lasan-perera-IdeaPad-5-15ABA7",
+  "board": "",
+  "cpu": "AMD Ryzen 7 5825U with Radeon Graphics",
+  "cores": 16,
+  "ram_gb": 13.5,
+  "gpu": null,
+  "delegate": "CPU",
+  "os": "Ubuntu 24.04.5 LTS",
+  "python": "3.12.16",
+  "mediapipe": "1.2.3",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4"
+ },
+ "frames": 150,
+ "mean_people": 3.0,
+ "perception_median_ms": {
+  "decode": 1.1529580006026663,
+  "people_strips": 169.84065099677537,
+  "people_whole_frame": 42.91637599817477,
+  "hands_per_person": 28.820644164322097,
+  "gaze_per_person": 10.065020333665114,
+  "facing_distance_per_person": 0.30709933586573845
+ },
+ "per_person_perception_ms": 39.19276383385294,
+ "frame_ms_strips": 288.5719004989369,
+ "frame_ms_whole_frame": 161.64762550033626,
+ "fps_strips": 3.465340867461501,
+ "fps_whole_frame": 6.186295634747322,
+ "decision_us_per_person": {
+  "gesture_only": 0.1298749994020909,
+  "nearest": 0.20439324138328785,
+  "distance_only": 0.1381579990265891,
+  "facing_only": 0.12263960088603199,
+  "gaze_only": 0.122765198466368,
+  "logreg": 2.7559815993299708,
+  "type1": 14.064856199547648,
+  "type1_gaze": 15.51361040037591,
+  "it2": 36.07087959826458,
+  "it2_gaze": 44.52134619932622
+ },
+ "our_end": {
+  "gesture_only": {
+   "ms_per_frame": 0.008858539998376122,
+   "us_per_person": 2.9528466661253736
+  },
+  "facing_only": {
+   "ms_per_frame": 0.09603693334308143,
+   "us_per_person": 32.01231111436047
+  },
+  "logreg": {
+   "ms_per_frame": 0.6774495400410766,
+   "us_per_person": 225.81651334702553
+  },
+  "type1_gaze": {
+   "ms_per_frame": 0.8272705732573135,
+   "us_per_person": 275.7568577524378
+  },
+  "it2_gaze": {
+   "ms_per_frame": 0.9480520666693337,
+   "us_per_person": 316.01735555644456
+  }
+ },
+ "our_end_person_frames": 450,
+ "decision_rows": 5000,
+ "decision_frames_nearest": 5000,
+ "gate_share_of_frame_pct_whole": 0.08262666289378981
+}

@@ -33,3 +33,5 @@ handover/*/*.csv.gz
 dev_data/
 engage/models/face_landmarker.task
 paper_overleaf.zip
+
+engage/bench_pkg/

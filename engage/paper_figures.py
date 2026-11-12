@@ -3,7 +3,7 @@
 
     ~/miniconda3/envs/lgd/bin/python paper_figures.py
 
-Reads results/analysis.json (sweep, noise) and engage/fuzzy.py (FOU illustration) and writes
+Reads results/full/eval.json (full dataset: sweep, operating points, noise) and engage/fuzzy.py (FOU illustration) and writes
 vector PDFs at exact CVPR column width to ../../cvpr2027_paper/figures/{fou,sweep,noise}.pdf.
 Include them with \\includegraphics[width=\\linewidth]{figures/<name>} (no rescaling).
 Palette: blue #2391FF, yellow #FFF83F, pink #F70063, plus greys. No orange.
@@ -12,6 +12,7 @@ import json
 import os
 
 import matplotlib
+import numpy as np
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -117,7 +118,7 @@ def fig_sweep(an):
     ax.annotate(r"frozen $\theta_E$", (100 * o[0]["p"], 100 * o[1]["p"]), xytext=(12, -16),
                 textcoords="offset points", fontsize=7, color=INK,
                 arrowprops=dict(arrowstyle="-", color=GREY, lw=0.5))
-    ax.set(xlim=(0, 65), ylim=(0, 80), xlabel=r"Bystander false-trigger rate (\%)",
+    ax.set(xlim=(0, 72), ylim=(0, 80), xlabel=r"Bystander false-trigger rate (\%)",
            ylabel=r"Commander recall (\%)")
     top_legend(fig, h, [x.get_label() for x in h], ncol=3, handlelength=1.8, columnspacing=1.0)
     save(fig, "sweep")
@@ -144,17 +145,72 @@ def fig_noise(an):
     axs[0, 0].set_ylabel(r"false triggers (\%)")
     axs[1, 0].set_ylabel(r"recall (\%)")
     axs[0, 0].set_ylim(bottom=0)
-    axs[0, 0].set_yticks([0, 2, 4, 6, 8])
     h, lab = axs[0, 0].get_legend_handles_labels()
     top_legend(fig, h, lab, ncol=2, handlelength=2.6)
     save(fig, "noise")
 
 
+def fig_cues():
+    """Episode-mean distance, facing and gaze: robot-directed (r) vs bystander (n) episodes."""
+    rows = json.load(open(os.path.join(RESULTS, "full", "episode_cues.json")))
+    fig, axs = plt.subplots(1, 3, figsize=(COLW, 1.15), gridspec_kw={"wspace": 0.18})
+    spec = (("distance", r"distance (m)", (0.8, 4.2), 0.2), ("facing", r"facing $f$", (0, 1), 0.05),
+            ("gaze", r"gaze $g$", (0, 1), 0.05))
+    h = []
+    for ax, (k, xl, lim, bw) in zip(axs, spec):
+        bins = np.arange(lim[0], lim[1] + bw / 2, bw)
+        for lab, col in (("n", PINK), ("r", BLUE)):
+            v = [r[k] for r in rows if r["label"] == lab]
+            h.append(ax.hist(v, bins=bins, density=True, color=col, alpha=0.55, lw=0)[2][0])
+        ax.set(xlabel=xl, xlim=lim, yticks=[])
+        ax.spines["left"].set_visible(False)
+        ax.xaxis.set_major_formatter(FuncFormatter(nolead))
+    nr = sum(r["label"] == "r" for r in rows)
+    nn = len(rows) - nr
+    top_legend(fig, [h[1], h[0]], [rf"for the robot ($r$, {nr:,})".replace(",", "{,}"),
+                                   rf"bystanders ($n$, {nn:,})".replace(",", "{,}")], ncol=2, handlelength=1.4)
+    save(fig, "cues")
+
+
+def fig_runtime():
+    """Time per frame on three devices (3 people in view): the shared perception networks vs. everything we add
+    after them (tracking, cues, uncertainty, IT2 + gaze gate, decision). Log scale."""
+    S = json.load(open(os.path.join(RESULTS, "full", "hardware", "summary.json")))["devices"]
+    devs = list(S)
+    label = {"Raspberry Pi 5": "Raspberry Pi 5", "Laptop CPU": "Laptop CPU", "Desktop CPU": "Desktop CPU"}
+    fig, ax = plt.subplots(figsize=(COLW, 1.18))
+    y = np.arange(len(devs))[::-1] * 1.0
+    hgt = 0.34
+    for k, (dv, yy) in enumerate(zip(devs, y)):
+        v = S[dv]
+        ax.barh(yy + hgt / 2 + 0.02, v["networks_ms"], height=hgt, color=GREY, lw=0)
+        ax.barh(yy - hgt / 2 - 0.02, v["ours_ms"], height=hgt, color=BLUE, lw=0)
+        ax.text(v["networks_ms"] * 1.12, yy + hgt / 2 + 0.02, rf"{v['networks_ms']:.0f}\,ms", va="center", fontsize=7, color=INK)
+        ax.text(v["ours_ms"] * 1.12, yy - hgt / 2 - 0.02,
+                rf"\textbf{{{v['ours_ms']:.2f}\,ms}} ({v['ours_share_pct']:.1f}\%)", va="center", fontsize=7, color=INK)
+    ax.set_xscale("log")
+    ax.set_xlim(0.12, 3000)
+    ax.set_ylim(y[-1] - 0.62, y[0] + 0.62)
+    ax.set_yticks(y, [label[d] for d in devs])
+    ax.tick_params(axis="y", length=0)
+    ax.set_xlabel("time per frame with three people (ms, log scale)")
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:g}"))
+    from matplotlib.patches import Patch
+    top_legend(fig, [Patch(color=GREY, lw=0), Patch(color=BLUE, lw=0)],
+               ["perception networks (shared)", "ours (everything after them)"],
+               ncol=2, handlelength=1.2, gap=0.0)
+    save(fig, "runtime")
+
+
 def main():
-    an = json.load(open(os.path.join(RESULTS, "analysis.json")))
+    an = json.load(open(os.path.join(RESULTS, "full", "eval.json")))
+    an["operating_point"] = {m: [an["policies"][m]["false_trigger"], an["policies"][m]["recall"]]
+                             for m in ("it2", "type1", "gesture_only")}
     fig_fou()
     fig_sweep(an)
     fig_noise(an)
+    fig_cues()
+    fig_runtime()
     print("wrote fou, sweep, noise ->", os.path.abspath(FIG))
 
 

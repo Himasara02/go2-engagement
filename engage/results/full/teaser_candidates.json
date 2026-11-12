@@ -1,0 +1,1436 @@
+[
+ {
+  "take": "D3_S2_r1",
+  "frame": 169,
+  "gap": 0.716044353647637,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "one",
+    "E_low": 0.8286385400691259
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.15002787457512362
+   },
+   {
+    "tid": 4,
+    "gesture": "fist",
+    "E_low": 0.1125941864214889
+   },
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.12122081115739299
+   }
+  ]
+ },
+ {
+  "take": "D2_S3_r1",
+  "frame": 61,
+  "gap": 0.6955100094042188,
+  "accept": [
+   {
+    "tid": 4,
+    "gesture": "one",
+    "E_low": 0.821385839654141
+   }
+  ],
+  "reject": [
+   {
+    "tid": 5,
+    "gesture": "mute",
+    "E_low": 0.12587583024992224
+   },
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.1318879931541306
+   },
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.12754135504886008
+   }
+  ]
+ },
+ {
+  "take": "D2_S3_r1",
+  "frame": 153,
+  "gap": 0.6794714154165292,
+  "accept": [
+   {
+    "tid": 6,
+    "gesture": "one",
+    "E_low": 0.8125815747627266
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.1762673672720157
+   },
+   {
+    "tid": 10,
+    "gesture": "mute",
+    "E_low": 0.20987228690779683
+   },
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.1331101593461974
+   }
+  ]
+ },
+ {
+  "take": "D3_S2_r2",
+  "frame": 382,
+  "gap": 0.6762909180710841,
+  "accept": [
+   {
+    "tid": 5,
+    "gesture": "fist",
+    "E_low": 0.8080148595606564
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.20823584477960555
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.13172394148957234
+   },
+   {
+    "tid": 13,
+    "gesture": "call",
+    "E_low": 0.4725713529214827
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r1",
+  "frame": 79,
+  "gap": 0.8509104361411193,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "palm",
+    "E_low": 0.8154469235702329
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11453648742911345
+   },
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.12316874071528655
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r5",
+  "frame": 146,
+  "gap": 0.8498950895142682,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8124919086434254
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12728760129002895
+   },
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11259681912915719
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r5",
+  "frame": 437,
+  "gap": 0.8491164897491983,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8104614131519515
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.1113449234027532
+   },
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12305440026515442
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r5",
+  "frame": 285,
+  "gap": 0.8483227739340738,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8095126139231644
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12441637942956503
+   },
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11118983998909064
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r3",
+  "frame": 640,
+  "gap": 0.8462490332954312,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "palm",
+    "E_low": 0.8034710917601849
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.11987637120168626
+   },
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.1072220584647537
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r4",
+  "frame": 910,
+  "gap": 0.8447284390953136,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8146559280986815
+   }
+  ],
+  "reject": [
+   {
+    "tid": 4,
+    "gesture": "call",
+    "E_low": 0.11992748900336796
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.13291078212423896
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r1",
+  "frame": 145,
+  "gap": 0.8441993360331389,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "palm",
+    "E_low": 0.8106324451216257
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.1164331090884868
+   },
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.12224972057834484
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r4",
+  "frame": 509,
+  "gap": 0.8347757459600662,
+  "accept": [
+   {
+    "tid": 28,
+    "gesture": "palm",
+    "E_low": 0.8118598092487844
+   }
+  ],
+  "reject": [
+   {
+    "tid": 32,
+    "gesture": "mute",
+    "E_low": 0.30888768969907976
+   },
+   {
+    "tid": 40,
+    "gesture": "call",
+    "E_low": 0.12708406328871824
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r4",
+  "frame": 806,
+  "gap": 0.8341815138765754,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8010387369110592
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12861092095928003
+   },
+   {
+    "tid": 4,
+    "gesture": "call",
+    "E_low": 0.11685722303448375
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r3",
+  "frame": 874,
+  "gap": 0.8338586969711697,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "palm",
+    "E_low": 0.7933365794309575
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.10947788245978778
+   },
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12118718211718156
+   }
+  ]
+ },
+ {
+  "take": "D3_S2_r2",
+  "frame": 507,
+  "gap": 0.8263905021484179,
+  "accept": [
+   {
+    "tid": 5,
+    "gesture": "palm",
+    "E_low": 0.8078419756324844
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.20541815267210334
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.1314514734840664
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r1",
+  "frame": 139,
+  "gap": 0.8104124088586131,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.7802991531232042
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.11988674426459106
+   },
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.15031576315634818
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r2",
+  "frame": 810,
+  "gap": 0.7758944034722635,
+  "accept": [
+   {
+    "tid": 4,
+    "gesture": "palm",
+    "E_low": 0.7713812061209232
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.14548680264865974
+   },
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.15513024265843958
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r3",
+  "frame": 239,
+  "gap": 0.7755561590610086,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "palm",
+    "E_low": 0.735102030241925
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.10954587118091637
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.11729626738001575
+   }
+  ]
+ },
+ {
+  "take": "D3_S2_r2",
+  "frame": 226,
+  "gap": 0.7525946642016637,
+  "accept": [
+   {
+    "tid": 5,
+    "gesture": "fist",
+    "E_low": 0.8146554942307846
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.20494844439854387
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.062060830029120946
+   }
+  ]
+ },
+ {
+  "take": "D3_S2_r1",
+  "frame": 405,
+  "gap": 0.7166664271100988,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "one",
+    "E_low": 0.8230232192476788
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.1063567921375801
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.1650318806938366
+   }
+  ]
+ },
+ {
+  "take": "D3_S2_r1",
+  "frame": 833,
+  "gap": 0.7098675969688442,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.8238127152062847
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.11394511823744062
+   },
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.16019243829228128
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r2",
+  "frame": 412,
+  "gap": 0.7027186219182375,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.81457688069267
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.11185825877443248
+   },
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.1359874782208833
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r4",
+  "frame": 669,
+  "gap": 0.7006485596803307,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.8153754374088079
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.12226395408882766
+   },
+   {
+    "tid": 4,
+    "gesture": "mute",
+    "E_low": 0.11472687772847726
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r2",
+  "frame": 313,
+  "gap": 0.6982389914464814,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.816107929039924
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.13211361366156515
+   },
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.11786893759344264
+   }
+  ]
+ },
+ {
+  "take": "D2_S2_r1",
+  "frame": 610,
+  "gap": 0.694193544935134,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.8047256616569386
+   }
+  ],
+  "reject": [
+   {
+    "tid": 24,
+    "gesture": "call",
+    "E_low": 0.13429828851765604
+   },
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.11053211672180466
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r1",
+  "frame": 231,
+  "gap": 0.6909270571392655,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.8061342779913421
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.11520722085207662
+   },
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.12345501291485793
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r2",
+  "frame": 578,
+  "gap": 0.6842392468686502,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "one",
+    "E_low": 0.796280546151744
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.11204129928309377
+   },
+   {
+    "tid": 1,
+    "gesture": "fist",
+    "E_low": 0.13667814976265238
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r1",
+  "frame": 310,
+  "gap": 0.6782818534622564,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.8061331288060534
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.1278512753437969
+   },
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.1383408123120847
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r1",
+  "frame": 688,
+  "gap": 0.6776155420592668,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.81684442619397
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.13922888413470327
+   },
+   {
+    "tid": 9,
+    "gesture": "call",
+    "E_low": 0.4829346447853813
+   }
+  ]
+ },
+ {
+  "take": "D4_S3_r2",
+  "frame": 827,
+  "gap": 0.6709755831687672,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "one",
+    "E_low": 0.7831005024816939
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11212491931292681
+   },
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.1369690160152048
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r2",
+  "frame": 927,
+  "gap": 0.6571097366629896,
+  "accept": [
+   {
+    "tid": 4,
+    "gesture": "one",
+    "E_low": 0.8021559485946087
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.15845870928906147
+   },
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.14504621193161915
+   }
+  ]
+ },
+ {
+  "take": "D3_S3_r2",
+  "frame": 211,
+  "gap": 0.6441978076402087,
+  "accept": [
+   {
+    "tid": 4,
+    "gesture": "mute",
+    "E_low": 0.7877628247673113
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.15659347666477563
+   },
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.14356501712710254
+   }
+  ]
+ },
+ {
+  "take": "D4_S4_r2",
+  "frame": 862,
+  "gap": 0.8607505338170721,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "palm",
+    "E_low": 0.8216806641246625
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "fist",
+    "E_low": 0.11093013030759036
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r6",
+  "frame": 809,
+  "gap": 0.8405291305793174,
+  "accept": [
+   {
+    "tid": 50,
+    "gesture": "palm",
+    "E_low": 0.772179722392946
+   }
+  ],
+  "reject": [
+   {
+    "tid": 55,
+    "gesture": "call",
+    "E_low": 0.08165059181362849
+   }
+  ]
+ },
+ {
+  "take": "D4_S5_r6",
+  "frame": 24,
+  "gap": 0.7924289672194825,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "palm",
+    "E_low": 0.8087878059825744
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.16635883876309174
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r4",
+  "frame": 387,
+  "gap": 0.7437231545484114,
+  "accept": [
+   {
+    "tid": 28,
+    "gesture": "mute",
+    "E_low": 0.7993996756810564
+   }
+  ],
+  "reject": [
+   {
+    "tid": 21,
+    "gesture": "mute",
+    "E_low": 0.055676521132645006
+   }
+  ]
+ },
+ {
+  "take": "D3_S6_r2",
+  "frame": 81,
+  "gap": 0.7415241139672628,
+  "accept": [
+   {
+    "tid": 9,
+    "gesture": "one",
+    "E_low": 0.8147508286583633
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.07322671469110056
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r5",
+  "frame": 204,
+  "gap": 0.7230172801330886,
+  "accept": [
+   {
+    "tid": 9,
+    "gesture": "fist",
+    "E_low": 0.809428564650679
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.08641128451759035
+   }
+  ]
+ },
+ {
+  "take": "D3_S6_r2",
+  "frame": 582,
+  "gap": 0.7143591469790416,
+  "accept": [
+   {
+    "tid": 48,
+    "gesture": "one",
+    "E_low": 0.8217754311743091
+   }
+  ],
+  "reject": [
+   {
+    "tid": 49,
+    "gesture": "call",
+    "E_low": 0.10741628419526748
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r4",
+  "frame": 663,
+  "gap": 0.7102649986243248,
+  "accept": [
+   {
+    "tid": 28,
+    "gesture": "fist",
+    "E_low": 0.8348489185004179
+   }
+  ],
+  "reject": [
+   {
+    "tid": 48,
+    "gesture": "mute",
+    "E_low": 0.1245839198760931
+   }
+  ]
+ },
+ {
+  "take": "D2_S6_r2",
+  "frame": 314,
+  "gap": 0.7054458878616464,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "fist",
+    "E_low": 0.791207190629294
+   }
+  ],
+  "reject": [
+   {
+    "tid": 37,
+    "gesture": "call",
+    "E_low": 0.0857613027676476
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r4",
+  "frame": 687,
+  "gap": 0.703507742390016,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "fist",
+    "E_low": 0.8165608457021724
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.11305310331215637
+   }
+  ]
+ },
+ {
+  "take": "D2_S6_r2",
+  "frame": 440,
+  "gap": 0.7034394249634791,
+  "accept": [
+   {
+    "tid": 54,
+    "gesture": "call",
+    "E_low": 0.8156294299840345
+   }
+  ],
+  "reject": [
+   {
+    "tid": 51,
+    "gesture": "call",
+    "E_low": 0.11219000502055547
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r5",
+  "frame": 129,
+  "gap": 0.7034188917810313,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.8127916501290585
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.10937275834802718
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r6",
+  "frame": 615,
+  "gap": 0.6961983822573647,
+  "accept": [
+   {
+    "tid": 22,
+    "gesture": "call",
+    "E_low": 0.7513401433174198
+   }
+  ],
+  "reject": [
+   {
+    "tid": 43,
+    "gesture": "call",
+    "E_low": 0.05514176106005509
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r2",
+  "frame": 147,
+  "gap": 0.6952855049340018,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.8132173330554525
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.1179318281214508
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r3",
+  "frame": 393,
+  "gap": 0.6939235000172442,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "fist",
+    "E_low": 0.8146925333188226
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "fist",
+    "E_low": 0.1207690333015784
+   }
+  ]
+ },
+ {
+  "take": "D4_S4_r4",
+  "frame": 202,
+  "gap": 0.6931336083622924,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.7997559114101535
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.10662230304786105
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r2",
+  "frame": 48,
+  "gap": 0.6927458058095625,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "fist",
+    "E_low": 0.8113357387119001
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "mute",
+    "E_low": 0.11858993290233767
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r5",
+  "frame": 1084,
+  "gap": 0.6890454940782178,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.7983217273101542
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.10927623323193637
+   }
+  ]
+ },
+ {
+  "take": "D4_S4_r1",
+  "frame": 311,
+  "gap": 0.6870963201954581,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.7986339859047258
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11153766570926768
+   }
+  ]
+ },
+ {
+  "take": "D2_S2_r1",
+  "frame": 412,
+  "gap": 0.6816586155890633,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.7918051458905049
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.11014653030144163
+   }
+  ]
+ },
+ {
+  "take": "D3_S4_r2",
+  "frame": 84,
+  "gap": 0.6754677047506251,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "mute",
+    "E_low": 0.8178866932608758
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.14241898851025073
+   }
+  ]
+ },
+ {
+  "take": "D4_S4_r4",
+  "frame": 641,
+  "gap": 0.6748325863522687,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.7888242452595059
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.11399165890723714
+   }
+  ]
+ },
+ {
+  "take": "D2_S2_r1",
+  "frame": 261,
+  "gap": 0.6725527823575373,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.7993707862260627
+   }
+  ],
+  "reject": [
+   {
+    "tid": 4,
+    "gesture": "mute",
+    "E_low": 0.12681800386852535
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r3",
+  "frame": 15,
+  "gap": 0.6625077530709267,
+  "accept": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.8022339066145442
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.13972615354361756
+   }
+  ]
+ },
+ {
+  "take": "D3_S6_r2",
+  "frame": 522,
+  "gap": 0.6492119495487418,
+  "accept": [
+   {
+    "tid": 27,
+    "gesture": "one",
+    "E_low": 0.8070095844453792
+   }
+  ],
+  "reject": [
+   {
+    "tid": 39,
+    "gesture": "call",
+    "E_low": 0.15779763489663728
+   }
+  ]
+ },
+ {
+  "take": "D4_S2_r3",
+  "frame": 604,
+  "gap": 0.648258216451608,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "mute",
+    "E_low": 0.7859196722794971
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.13766145582788913
+   }
+  ]
+ },
+ {
+  "take": "D4_S4_r4",
+  "frame": 783,
+  "gap": 0.6391113029951014,
+  "accept": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.7624116253212196
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "call",
+    "E_low": 0.12330032232611822
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r6",
+  "frame": 73,
+  "gap": 0.6052182978243112,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "one",
+    "E_low": 0.7279699099955153
+   }
+  ],
+  "reject": [
+   {
+    "tid": 4,
+    "gesture": "fist",
+    "E_low": 0.12275161217120403
+   }
+  ]
+ },
+ {
+  "take": "D2_S6_r1",
+  "frame": 298,
+  "gap": 0.6026729518434443,
+  "accept": [
+   {
+    "tid": 25,
+    "gesture": "fist",
+    "E_low": 0.7051598203670624
+   }
+  ],
+  "reject": [
+   {
+    "tid": 38,
+    "gesture": "call",
+    "E_low": 0.10248686852361806
+   }
+  ]
+ },
+ {
+  "take": "D2_S3_r2",
+  "frame": 270,
+  "gap": 0.6010211949108822,
+  "accept": [
+   {
+    "tid": 8,
+    "gesture": "one",
+    "E_low": 0.7460402348824698
+   }
+  ],
+  "reject": [
+   {
+    "tid": 1,
+    "gesture": "fist",
+    "E_low": 0.1450190399715876
+   }
+  ]
+ },
+ {
+  "take": "D2_S3_r2",
+  "frame": 150,
+  "gap": 0.4618037940693712,
+  "accept": [
+   {
+    "tid": 5,
+    "gesture": "call",
+    "E_low": 0.7903579084899921
+   }
+  ],
+  "reject": [
+   {
+    "tid": 3,
+    "gesture": "call",
+    "E_low": 0.3285541144206209
+   }
+  ]
+ },
+ {
+  "take": "D2_S6_r2",
+  "frame": 87,
+  "gap": 0.22040445947529824,
+  "accept": [
+   {
+    "tid": 4,
+    "gesture": "mute",
+    "E_low": 0.6038631646225013
+   }
+  ],
+  "reject": [
+   {
+    "tid": 10,
+    "gesture": "call",
+    "E_low": 0.3834587051472031
+   }
+  ]
+ },
+ {
+  "take": "D3_S4_r2",
+  "frame": 542,
+  "gap": 0.219099834806171,
+  "accept": [
+   {
+    "tid": 1,
+    "gesture": "one",
+    "E_low": 0.8140462840394836
+   }
+  ],
+  "reject": [
+   {
+    "tid": 2,
+    "gesture": "call",
+    "E_low": 0.5949464492333126
+   }
+  ]
+ },
+ {
+  "take": "D4_S6_r3",
+  "frame": 207,
+  "gap": 0.21161907366722477,
+  "accept": [
+   {
+    "tid": 11,
+    "gesture": "mute",
+    "E_low": 0.7948790181460771
+   }
+  ],
+  "reject": [
+   {
+    "tid": 12,
+    "gesture": "mute",
+    "E_low": 0.5832599444788523
+   }
+  ]
+ }
+]

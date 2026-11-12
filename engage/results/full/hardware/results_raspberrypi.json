@@ -1,0 +1,69 @@
+{
+ "system": {
+  "host": "raspberrypi",
+  "board": "Raspberry Pi 5 Model B Rev 1.0",
+  "cpu": "Cortex-A76",
+  "cores": 4,
+  "ram_gb": 3.9,
+  "gpu": null,
+  "delegate": "CPU",
+  "os": "Ubuntu 24.04.5 LTS",
+  "python": "3.12.3",
+  "mediapipe": "1.2.3",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4"
+ },
+ "frames": 150,
+ "mean_people": 3.006666666666667,
+ "perception_median_ms": {
+  "decode": 4.6107145001315075,
+  "people_strips": 508.9791855002659,
+  "people_whole_frame": 124.12266549995365,
+  "hands_per_person": 89.2107133333108,
+  "gaze_per_person": 25.73089516674069,
+  "facing_distance_per_person": 0.41202100002616737
+ },
+ "per_person_perception_ms": 115.35362950007767,
+ "frame_ms_strips": 860.4198126972976,
+ "frame_ms_whole_frame": 475.5632926969854,
+ "fps_strips": 1.1622233533478705,
+ "fps_whole_frame": 2.1027695269095754,
+ "decision_us_per_person": {
+  "gesture_only": 0.2833292000104848,
+  "nearest": 0.49255553728823687,
+  "distance_only": 0.31699940000180504,
+  "facing_only": 0.2834328000062669,
+  "gaze_only": 0.28025500005242066,
+  "logreg": 5.761987200003205,
+  "type1": 29.079642799933936,
+  "type1_gaze": 32.31629319998319,
+  "it2": 75.52483220006252,
+  "it2_gaze": 91.53596639998796
+ },
+ "our_end": {
+  "gesture_only": {
+   "ms_per_frame": 0.021256140001545038,
+   "us_per_person": 7.069669623573738
+  },
+  "facing_only": {
+   "ms_per_frame": 0.1554344466664285,
+   "us_per_person": 51.69660088683875
+  },
+  "logreg": {
+   "ms_per_frame": 1.0652421466663025,
+   "us_per_person": 354.293396895666
+  },
+  "type1_gaze": {
+   "ms_per_frame": 1.2991305533341801,
+   "us_per_person": 432.08333259451666
+  },
+  "it2_gaze": {
+   "ms_per_frame": 1.4916623533311697,
+   "us_per_person": 496.11829933409194
+  }
+ },
+ "our_end_person_frames": 451,
+ "decision_rows": 5000,
+ "decision_frames_nearest": 5000,
+ "gate_share_of_frame_pct_whole": 0.05787203158914212
+}
