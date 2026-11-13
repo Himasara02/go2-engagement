@@ -43,8 +43,8 @@ from engage.takeio import proc_size
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-TAKES = os.path.join(ROOT, "data", "dataset_2026-11-10", "takes_crop3")
-OUT = os.path.join(ROOT, "data", "cues_2026-11-10")
+TAKES = os.environ.get("CUES_TAKES", os.path.join(ROOT, "data", "dataset_2026-11-10", "takes_crop3"))
+OUT = os.environ.get("CUES_OUT", os.path.join(ROOT, "data", "cues_2026-11-10"))   # env: walking run
 POSE_MODEL = os.path.join(ROOT, "data", "labels_pack_2026-11-10", "code", "models", "pose_landmarker_full.task")
 FACE_MODEL = os.path.join(HERE, "models", "face_landmarker.task")
 # strip detection: identical to find_people_tiled.py (labels pack)

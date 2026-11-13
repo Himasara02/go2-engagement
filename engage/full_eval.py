@@ -44,12 +44,12 @@ from engage.methods import COMMAND_MAP
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-TAKES = os.path.join(ROOT, "data", "dataset_2026-11-11", "takes_crop3")
+TAKES = os.environ.get("TAKES", os.path.join(ROOT, "data", "dataset_2026-11-11", "takes_crop3"))
 LABELS = os.environ.get("LABELS", os.path.join(ROOT, "data", "depthpack_2026-11-11", "labels_pack_2026-11-10",
                                                 "labels_final.csv"))   # annotator A (paper); env LABELS for C / agreed
-CUES = os.path.join(ROOT, "data", "cues_2026-11-10")
+CUES = os.environ.get("CUES", os.path.join(ROOT, "data", "cues_2026-11-10"))
 DIST = os.path.join(ROOT, "data", "clip_distance_2026-11-11")
-PDIST = os.path.join(ROOT, "data", "person_distance_2026-11-12")
+PDIST = os.environ.get("PDIST", os.path.join(ROOT, "data", "person_distance_2026-11-12"))
 DIST_SRC = os.environ.get("DIST_SRC", "track")   # paper (from 12 Nov): track
 OUT = os.environ.get("EVAL_OUT", os.path.join(HERE, "results", "full"))
 P = DecisionParams()
@@ -111,21 +111,23 @@ def holm(ps):
 
 # ------------------------------------------------------------------ data
 class Data:
-    def __init__(self):
-        rows = [r for r in csv.DictReader(open(LABELS)) if r["label"] in ("r", "n")]
+    def __init__(self, labels=None, takes=None, cues=None, pdist=None):
+        LABELS_, TAKES_, CUES_, PDIST_ = labels or LABELS, takes or TAKES, cues or CUES, pdist or PDIST
+        rows = [r for r in csv.DictReader(open(LABELS_)) if r["label"] in ("r", "n")]
         self.eps, pf = [], []
         self.missing = defaultdict(int)
         by_take = defaultdict(list)
         for r in rows:
             by_take[r["take"]].append(r)
-        self.skipped = [t for t in sorted(by_take) if not os.path.exists(os.path.join(DIST, t + ".json"))]
+        need = (lambda t: os.path.join(PDIST_, t + ".json.gz")) if DIST_SRC == "track" else (lambda t: os.path.join(DIST, t + ".json"))
+        self.skipped = [t for t in sorted(by_take) if not os.path.exists(need(t))]
         for take in sorted(by_take):
             if take in self.skipped:
                 continue
-            recs = [json.loads(l) for l in open(os.path.join(TAKES, take, "log.jsonl"))]
-            cues = [json.loads(l) for l in gzip.open(os.path.join(CUES, take + ".jsonl.gz"), "rt")]
-            dist = json.load(open(os.path.join(DIST, take + ".json")))
-            pdf = os.path.join(PDIST, take + ".json.gz")
+            recs = [json.loads(l) for l in open(os.path.join(TAKES_, take, "log.jsonl"))]
+            cues = [json.loads(l) for l in gzip.open(os.path.join(CUES_, take + ".jsonl.gz"), "rt")]
+            dist = json.load(open(os.path.join(DIST, take + ".json"))) if DIST_SRC != "track" else {}
+            pdf = os.path.join(PDIST_, take + ".json.gz")
             pd = json.load(gzip.open(pdf, "rt")) if os.path.exists(pdf) else {}
             for r in by_take[take]:
                 tid, c = int(r["track_id"]), r["clip"]
@@ -239,7 +241,29 @@ def main():
     F = np.stack([d.x[k] for k in FEATS], 1)
     ep_rows = [[i for i in e["idx"] if i is not None] for e in d.eps]
     coefs = []
-    for ti, take in enumerate(d.takes):
+    if os.environ.get("FIT_ON") == "standing":
+        # walking evaluation: thresholds and regression fitted once on all 60 standing recordings (no walking data)
+        ds = Data(labels=os.path.join(ROOT, "data", "depthpack_2026-11-11", "labels_pack_2026-11-10", "labels_final.csv"),
+                  takes=os.path.join(ROOT, "data", "dataset_2026-11-11", "takes_crop3"),
+                  cues=os.path.join(ROOT, "data", "cues_2026-11-10"),
+                  pdist=os.path.join(ROOT, "data", "person_distance_2026-11-12"))
+        Ls, alls = ds.lab, np.ones(len(ds.lab), bool)
+        sv_s = {"facing_only": ds.best_window(ds.x["facing"]), "gaze_only": ds.best_window(ds.x["gaze"]),
+                "distance_only": ds.best_window(-ds.x["distance"])}
+        for m, (_, grid) in single.items():
+            tau = youden(sv_s[m], Ls, alls, grid)
+            fitted[m]["standing"] = tau
+            acc[m] = SV[m] >= tau
+        Fs = np.stack([ds.x[k] for k in FEATS], 1)
+        rows_s = [i for e in ds.eps for i in e["idx"] if i is not None]
+        y_s = [l for e, l in zip(ds.eps, Ls) for i in e["idx"] if i is not None]
+        clf = make_pipeline(StandardScaler(), LogisticRegression(class_weight="balanced", max_iter=1000))
+        clf.fit(Fs[rows_s], np.array(y_s))
+        tau = youden(ds.best_window(clf.predict_proba(Fs)[:, 1]), Ls, alls, np.round(np.arange(0.05, 0.96, 0.025), 3))
+        acc["logreg"] = d.best_window(clf.predict_proba(F)[:, 1]) >= tau
+        coefs.append(clf[-1].coef_[0])
+        fitted["logreg"]["standing"] = {"tau": tau, "coef": dict(zip(FEATS, map(float, clf[-1].coef_[0])))}
+    for ti, take in enumerate(d.takes if os.environ.get("FIT_ON") != "standing" else []):
         test, train = d.take_of == ti, d.take_of != ti
         for m, (_, grid) in single.items():
             tau = youden(SV[m], L, train, grid)
@@ -355,7 +379,7 @@ def main():
                                   for m in ("type1", "it2")}
 
     # noise injection (task6)
-    fo_tau = np.array([fitted["facing_only"][d.takes[t]] for t in d.take_of])
+    fo_tau = np.array([fitted["facing_only"].get(d.takes[t], fitted["facing_only"].get("standing")) for t in d.take_of])
     levels = {"facing": [0, 0.1, 0.2, 0.3], "distance": [0, 0.3, 0.6, 1.0]}
     noise = {}
     for var, ss in levels.items():

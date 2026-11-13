@@ -15,7 +15,8 @@ import os
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TAKES = os.path.join(HERE, "..", "..", "data", "dataset_2026-11-11", "takes_crop3")
+TAKES = os.environ.get("TAKES", os.path.join(HERE, "..", "..", "data", "dataset_2026-11-11", "takes_crop3"))
+NAME = os.environ.get("TRACK_NAME", "tracking")   # tracking_walking for the walking recordings
 rows = []
 for d in sorted(glob.glob(os.path.join(TAKES, "*"))):
     recs = [json.loads(l) for l in open(os.path.join(d, "log.jsonl"))]
@@ -36,11 +37,11 @@ for s in sorted({r["scenario"] for r in rows}):
 tot = {"tracks_per_person": sum(r["tracks"] for r in rows) / sum(r["people"] for r in rows),
        "extra_per_min": sum(max(0, r["tracks"] - r["people"]) for r in rows) / sum(r["minutes"] for r in rows),
        "standing_only": None}
-st = [r for r in rows if r["scenario"] != "S6"]
+st = [r for r in rows if r["scenario"] != "S6"] or rows
 tot["standing_only"] = {"tracks_per_person": sum(r["tracks"] for r in st) / sum(r["people"] for r in st),
                         "extra_per_min": sum(max(0, r["tracks"] - r["people"]) for r in st) / sum(r["minutes"] for r in st)}
 out = os.path.join(HERE, "results", "full")
-json.dump({"per_take": rows, "by_scenario": by, "total": tot}, open(os.path.join(out, "tracking.json"), "w"), indent=1)
+json.dump({"per_take": rows, "by_scenario": by, "total": tot}, open(os.path.join(out, NAME + ".json"), "w"), indent=1)
 md = ["# Tracking: track IDs per person in view (tracks >= 10 frames)", "",
       "| Scenario | Rec. | People | Tracks | Tracks/person | Extra IDs/min |", "|---|---|---|---|---|---|"]
 md += [f"| {s} | {v['recordings']} | {v['people']} | {v['tracks']} | {v['tracks_per_person']:.2f} | {v['extra_per_min']:.1f} |"
@@ -48,5 +49,5 @@ md += [f"| {s} | {v['recordings']} | {v['people']} | {v['tracks']} | {v['tracks_
 md += ["", f"All: {tot['tracks_per_person']:.2f} tracks per person, {tot['extra_per_min']:.1f} extra IDs per minute. "
        f"Without S6 (people walk across): {tot['standing_only']['tracks_per_person']:.2f}, "
        f"{tot['standing_only']['extra_per_min']:.1f} per minute."]
-open(os.path.join(out, "tracking.md"), "w").write("\n".join(md) + "\n")
+open(os.path.join(out, NAME + ".md"), "w").write("\n".join(md) + "\n")
 print("\n".join(md))

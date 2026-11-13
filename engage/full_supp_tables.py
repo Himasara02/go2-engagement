@@ -161,6 +161,32 @@ Episodes $r$\,/\,$n$ & """ + neps + r"""\\
 \end{table}
 """)
 
+# walking recordings: by scenario, with track fragmentation
+WE = json.load(open(os.path.join(HERE, "results", "full_walking", "eval.json")))
+TW = json.load(open(os.path.join(R, "tracking_walking.json")))["by_scenario"]
+WN = {"W1": "leads", "W2": "pair", "W3": "crossing", "W4": "leave", "W5": "lookalike", "W6": "turn away"}
+wm = ["gesture_only", "nearest", "facing_only", "type1_gaze", "it2_gaze"]
+rows = [f"{sc} {WN[sc]} & " + " & ".join(fr(WE['by']['scenario'][sc][m]) if m in WE['by']['scenario'][sc]
+                                          else "" for m in wm[:3] + ["type1", "it2_gaze"]) + f" & {TW[sc]['tracks_per_person']:.1f}\\\\"
+        for sc in WN]
+allw = "All & " + " & ".join(fr(WE["policies"][m]) for m in wm[:3] + ["type1", "it2_gaze"]) + \
+       f" & {json.load(open(os.path.join(R, 'tracking_walking.json')))['total']['tracks_per_person']:.1f}\\\\"
+write("supp_walking", r"""\begin{table}[h]
+\centering\small\setlength{\tabcolsep}{1.6pt}
+\caption{Walking recordings: false triggers\,/\,recall (\%) by scenario, and track IDs per person in view (IDs).
+Fitted baselines use thresholds from the standing recordings.}
+\label{tab:supp_walking}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+& Gesture & Nearest & Facing & Type-1 & IT2 & IDs\\
+& only & person & only & & + gaze & \\
+\midrule
+""" + "\n".join(rows) + "\n\\midrule\n" + allw + r"""
+\bottomrule
+\end{tabular}
+\end{table}
+""")
+
 # runtime on three devices + tracking
 HW = json.load(open(os.path.join(R, "hardware", "summary.json")))
 dv = HW["devices"]
@@ -214,4 +240,4 @@ Scen. & IDs/person & extra/min\\
 \end{tabular}
 \end{table}
 """)
-print("wrote tables/supp_{scenario,stats,splits,untuned,annot,cost}.tex")
+print("wrote tables/supp_{scenario,stats,splits,untuned,annot,walking,cost}.tex")

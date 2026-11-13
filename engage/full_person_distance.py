@@ -33,16 +33,16 @@ from engage.perception import L_HIP, L_SH, R_HIP, R_SH, SHOULDER_WIDTH_M
 from engage.takeio import proc_size
 from full_cues import FX_PROC, MATCH_IOU, ROOT, detect_people, iou2, models
 
-TAKES = os.path.join(ROOT, "data", "dataset_2026-11-11", "takes_crop3")
-DEPTH = os.path.join(ROOT, "data", "depth_2026-11-10")
-OUT = os.path.join(ROOT, "data", "person_distance_2026-11-12")
+TAKES = os.environ.get("PD_TAKES", os.path.join(ROOT, "data", "dataset_2026-11-11", "takes_crop3"))
+DEPTH = os.environ.get("PD_DEPTH", os.path.join(ROOT, "data", "depth_2026-11-10"))
+OUT = os.environ.get("PD_OUT", os.path.join(ROOT, "data", "person_distance_2026-11-12"))   # env: walking run
 HALF = 3   # 7x7 patch
 
 
 class DepthReader:
     def __init__(self, take):
         self.where, self.cache = {}, (None, None)
-        for f in sorted(glob.glob(os.path.join(DEPTH, take, "*.npz"))):
+        for f in sorted(glob.glob(os.path.join(DEPTH, take, "*.npz")) + glob.glob(os.path.join(DEPTH, take, "depth", "*.npz"))):
             for k, i in enumerate(np.load(f)["idx"]):
                 self.where[int(i)] = (f, k)
 

@@ -1,0 +1,224 @@
+{
+ "per_take": [
+  {
+   "take": "D5_W1_r1",
+   "scenario": "W1",
+   "people": 4,
+   "tracks": 18,
+   "minutes": 1.9616666666666667,
+   "extra_per_min": 7.13678844519966
+  },
+  {
+   "take": "D5_W1_r2",
+   "scenario": "W1",
+   "people": 3,
+   "tracks": 11,
+   "minutes": 1.9066666666666667,
+   "extra_per_min": 4.195804195804196
+  },
+  {
+   "take": "D5_W1_r3",
+   "scenario": "W1",
+   "people": 3,
+   "tracks": 16,
+   "minutes": 1.9166666666666667,
+   "extra_per_min": 6.782608695652174
+  },
+  {
+   "take": "D5_W1_r4",
+   "scenario": "W1",
+   "people": 3,
+   "tracks": 15,
+   "minutes": 1.9200000000000002,
+   "extra_per_min": 6.249999999999999
+  },
+  {
+   "take": "D5_W2_r1",
+   "scenario": "W2",
+   "people": 3,
+   "tracks": 23,
+   "minutes": 1.9183333333333332,
+   "extra_per_min": 10.425716768027803
+  },
+  {
+   "take": "D5_W2_r2",
+   "scenario": "W2",
+   "people": 3,
+   "tracks": 17,
+   "minutes": 1.9116666666666666,
+   "extra_per_min": 7.323452484742807
+  },
+  {
+   "take": "D5_W2_r3",
+   "scenario": "W2",
+   "people": 3,
+   "tracks": 19,
+   "minutes": 1.915,
+   "extra_per_min": 8.35509138381201
+  },
+  {
+   "take": "D5_W2_r4",
+   "scenario": "W2",
+   "people": 3,
+   "tracks": 26,
+   "minutes": 1.9116666666666666,
+   "extra_per_min": 12.031386224934613
+  },
+  {
+   "take": "D5_W3_r2",
+   "scenario": "W3",
+   "people": 3,
+   "tracks": 18,
+   "minutes": 1.9083333333333334,
+   "extra_per_min": 7.860262008733624
+  },
+  {
+   "take": "D5_W3_r3",
+   "scenario": "W3",
+   "people": 2,
+   "tracks": 24,
+   "minutes": 1.8983333333333334,
+   "extra_per_min": 11.589113257243195
+  },
+  {
+   "take": "D5_W3_r4",
+   "scenario": "W3",
+   "people": 2,
+   "tracks": 40,
+   "minutes": 1.9166666666666667,
+   "extra_per_min": 19.82608695652174
+  },
+  {
+   "take": "D5_W3_r5",
+   "scenario": "W3",
+   "people": 3,
+   "tracks": 50,
+   "minutes": 1.9200000000000002,
+   "extra_per_min": 24.479166666666664
+  },
+  {
+   "take": "D5_W4_r1",
+   "scenario": "W4",
+   "people": 2,
+   "tracks": 7,
+   "minutes": 1.7016666666666667,
+   "extra_per_min": 2.9382957884427032
+  },
+  {
+   "take": "D5_W4_r2",
+   "scenario": "W4",
+   "people": 2,
+   "tracks": 12,
+   "minutes": 1.6983333333333335,
+   "extra_per_min": 5.888125613346418
+  },
+  {
+   "take": "D5_W4_r3",
+   "scenario": "W4",
+   "people": 2,
+   "tracks": 10,
+   "minutes": 1.6983333333333335,
+   "extra_per_min": 4.710500490677134
+  },
+  {
+   "take": "D5_W5_r1",
+   "scenario": "W5",
+   "people": 2,
+   "tracks": 11,
+   "minutes": 1.9183333333333332,
+   "extra_per_min": 4.6915725456125115
+  },
+  {
+   "take": "D5_W5_r2",
+   "scenario": "W5",
+   "people": 3,
+   "tracks": 11,
+   "minutes": 1.9200000000000002,
+   "extra_per_min": 4.166666666666666
+  },
+  {
+   "take": "D5_W5_r3",
+   "scenario": "W5",
+   "people": 2,
+   "tracks": 17,
+   "minutes": 1.9183333333333332,
+   "extra_per_min": 7.819287576020852
+  },
+  {
+   "take": "D5_W6_r1",
+   "scenario": "W6",
+   "people": 3,
+   "tracks": 16,
+   "minutes": 1.6566666666666667,
+   "extra_per_min": 7.847082494969818
+  },
+  {
+   "take": "D5_W6_r2",
+   "scenario": "W6",
+   "people": 3,
+   "tracks": 30,
+   "minutes": 1.655,
+   "extra_per_min": 16.31419939577039
+  },
+  {
+   "take": "D5_W6_r3",
+   "scenario": "W6",
+   "people": 3,
+   "tracks": 27,
+   "minutes": 1.6533333333333333,
+   "extra_per_min": 14.516129032258064
+  }
+ ],
+ "by_scenario": {
+  "W1": {
+   "recordings": 4,
+   "people": 13,
+   "tracks": 60,
+   "tracks_per_person": 4.615384615384615,
+   "extra_per_min": 6.099935107073329
+  },
+  "W2": {
+   "recordings": 4,
+   "people": 12,
+   "tracks": 85,
+   "tracks_per_person": 7.083333333333333,
+   "extra_per_min": 9.534175010883763
+  },
+  "W3": {
+   "recordings": 4,
+   "people": 10,
+   "tracks": 132,
+   "tracks_per_person": 13.2,
+   "extra_per_min": 15.961622328826865
+  },
+  "W4": {
+   "recordings": 3,
+   "people": 6,
+   "tracks": 29,
+   "tracks_per_person": 4.833333333333333,
+   "extra_per_min": 4.511278195488722
+  },
+  "W5": {
+   "recordings": 3,
+   "people": 7,
+   "tracks": 39,
+   "tracks_per_person": 5.571428571428571,
+   "extra_per_min": 5.558772437753329
+  },
+  "W6": {
+   "recordings": 3,
+   "people": 9,
+   "tracks": 73,
+   "tracks_per_person": 8.11111111111111,
+   "extra_per_min": 12.890231621349447
+  }
+ },
+ "total": {
+  "tracks_per_person": 7.333333333333333,
+  "extra_per_min": 9.298132646490663,
+  "standing_only": {
+   "tracks_per_person": 7.333333333333333,
+   "extra_per_min": 9.298132646490663
+  }
+ }
+}

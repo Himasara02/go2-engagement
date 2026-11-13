@@ -1344,5 +1344,542 @@
    "one": 1,
    "call": 1
   }
+ },
+ "walking": {
+  "total": {
+   "recordings": 21,
+   "minutes": 38.825,
+   "people_mean": 2.213895820336868,
+   "people_max": 5,
+   "r": 945,
+   "n": 1472,
+   "x": 61,
+   "participant_codes": [
+    "P05",
+    "P06",
+    "P07",
+    "P08"
+   ],
+   "fps_median": 22.933465511289707
+  },
+  "per_scenario": {
+   "W1": {
+    "recordings": 4,
+    "minutes": 7.705,
+    "people_mean": 2.9889255670322648,
+    "r": 231,
+    "n": 128,
+    "x": 0
+   },
+   "W2": {
+    "recordings": 4,
+    "minutes": 7.656666666666666,
+    "people_mean": 2.7834615384615384,
+    "r": 175,
+    "n": 936,
+    "x": 0
+   },
+   "W3": {
+    "recordings": 4,
+    "minutes": 7.6433333333333335,
+    "people_mean": 1.7853218210361068,
+    "r": 287,
+    "n": 33,
+    "x": 0
+   },
+   "W4": {
+    "recordings": 3,
+    "minutes": 5.098333333333333,
+    "people_mean": 1.3514065005101297,
+    "r": 78,
+    "n": 75,
+    "x": 49
+   },
+   "W5": {
+    "recordings": 3,
+    "minutes": 5.756666666666666,
+    "people_mean": 1.9395886889460154,
+    "r": 90,
+    "n": 201,
+    "x": 12
+   },
+   "W6": {
+    "recordings": 3,
+    "minutes": 4.965,
+    "people_mean": 2.0966726618705036,
+    "r": 84,
+    "n": 99,
+    "x": 0
+   }
+  },
+  "per_take": [
+   {
+    "take": "D5_W1_r1",
+    "day": "D5",
+    "scenario": "W1",
+    "duration_s": 117.7,
+    "frames": 1600,
+    "fps": 14.377815543146935,
+    "people_mean": 3.11125,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W1_r2",
+    "day": "D5",
+    "scenario": "W1",
+    "duration_s": 114.4,
+    "frames": 2600,
+    "fps": 23.153881103617852,
+    "people_mean": 2.9303846153846154,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W1_r3",
+    "day": "D5",
+    "scenario": "W1",
+    "duration_s": 115.0,
+    "frames": 2600,
+    "fps": 23.04895352962043,
+    "people_mean": 2.953076923076923,
+    "people_max": 5,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W1_r4",
+    "day": "D5",
+    "scenario": "W1",
+    "duration_s": 115.2,
+    "frames": 2591,
+    "fps": 22.926440647959634,
+    "people_mean": 3.008104978772675,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W2_r1",
+    "day": "D5",
+    "scenario": "W2",
+    "duration_s": 115.1,
+    "frames": 2600,
+    "fps": 23.014052828718423,
+    "people_mean": 2.598846153846154,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W2_r2",
+    "day": "D5",
+    "scenario": "W2",
+    "duration_s": 114.7,
+    "frames": 2600,
+    "fps": 23.120718797260032,
+    "people_mean": 2.851153846153846,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W2_r3",
+    "day": "D5",
+    "scenario": "W2",
+    "duration_s": 114.9,
+    "frames": 2600,
+    "fps": 23.06777434586573,
+    "people_mean": 2.8876923076923076,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W2_r4",
+    "day": "D5",
+    "scenario": "W2",
+    "duration_s": 114.7,
+    "frames": 2600,
+    "fps": 23.0944214398692,
+    "people_mean": 2.796153846153846,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W3_r2",
+    "day": "D5",
+    "scenario": "W3",
+    "duration_s": 114.5,
+    "frames": 2600,
+    "fps": 23.143572070989055,
+    "people_mean": 2.235,
+    "people_max": 5,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W3_r3",
+    "day": "D5",
+    "scenario": "W3",
+    "duration_s": 113.9,
+    "frames": 2400,
+    "fps": 21.495260111463544,
+    "people_mean": 1.57,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W3_r4",
+    "day": "D5",
+    "scenario": "W3",
+    "duration_s": 115.0,
+    "frames": 2600,
+    "fps": 23.04057588141949,
+    "people_mean": 1.6503846153846153,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W3_r5",
+    "day": "D5",
+    "scenario": "W3",
+    "duration_s": 115.2,
+    "frames": 2592,
+    "fps": 22.933465511289707,
+    "people_mean": 1.6689814814814814,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W4_r1",
+    "day": "D5",
+    "scenario": "W4",
+    "duration_s": 102.1,
+    "frames": 2302,
+    "fps": 22.789398621345377,
+    "people_mean": 1.139443961772372,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W4_r2",
+    "day": "D5",
+    "scenario": "W4",
+    "duration_s": 101.9,
+    "frames": 2278,
+    "fps": 22.550806164085095,
+    "people_mean": 1.2695346795434592,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W4_r3",
+    "day": "D5",
+    "scenario": "W4",
+    "duration_s": 101.9,
+    "frames": 2281,
+    "fps": 22.57649272205169,
+    "people_mean": 1.6470846120122753,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W5_r1",
+    "day": "D5",
+    "scenario": "W5",
+    "duration_s": 115.1,
+    "frames": 2586,
+    "fps": 22.87630863989947,
+    "people_mean": 1.9122196442382058,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W5_r2",
+    "day": "D5",
+    "scenario": "W5",
+    "duration_s": 115.2,
+    "frames": 2594,
+    "fps": 22.947511880846395,
+    "people_mean": 2.043562066306862,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W5_r3",
+    "day": "D5",
+    "scenario": "W5",
+    "duration_s": 115.1,
+    "frames": 2600,
+    "fps": 23.05815552499667,
+    "people_mean": 1.863076923076923,
+    "people_max": 3,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W6_r1",
+    "day": "D5",
+    "scenario": "W6",
+    "duration_s": 99.4,
+    "frames": 2235,
+    "fps": 22.566796302843578,
+    "people_mean": 2.068903803131991,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W6_r2",
+    "day": "D5",
+    "scenario": "W6",
+    "duration_s": 99.3,
+    "frames": 2223,
+    "fps": 22.447845633176744,
+    "people_mean": 2.112460638776428,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   },
+   {
+    "take": "D5_W6_r3",
+    "day": "D5",
+    "scenario": "W6",
+    "duration_s": 99.2,
+    "frames": 2214,
+    "fps": 22.357826249482226,
+    "people_mean": 2.1088527551942184,
+    "people_max": 4,
+    "participant_codes": [
+     "P05",
+     "P06",
+     "P07",
+     "P08"
+    ],
+    "location": "hall",
+    "has_depth_recorded": true
+   }
+  ],
+  "per_take_labels": {
+   "D5_W1_r1": {
+    "r": 56,
+    "n": 20
+   },
+   "D5_W1_r2": {
+    "n": 35,
+    "r": 77
+   },
+   "D5_W1_r3": {
+    "r": 68,
+    "n": 16
+   },
+   "D5_W1_r4": {
+    "n": 57,
+    "r": 30
+   },
+   "D5_W2_r1": {
+    "n": 130,
+    "r": 17
+   },
+   "D5_W2_r2": {
+    "n": 279,
+    "r": 23
+   },
+   "D5_W2_r3": {
+    "n": 312,
+    "r": 91
+   },
+   "D5_W2_r4": {
+    "n": 215,
+    "r": 44
+   },
+   "D5_W3_r2": {
+    "r": 117,
+    "n": 1
+   },
+   "D5_W3_r3": {
+    "r": 47
+   },
+   "D5_W3_r4": {
+    "r": 65,
+    "n": 4
+   },
+   "D5_W3_r5": {
+    "r": 58,
+    "n": 28
+   },
+   "D5_W4_r1": {
+    "r": 17,
+    "n": 33
+   },
+   "D5_W4_r2": {
+    "x": 5,
+    "r": 32,
+    "n": 15
+   },
+   "D5_W4_r3": {
+    "r": 29,
+    "n": 27,
+    "x": 44
+   },
+   "D5_W5_r1": {
+    "x": 5,
+    "r": 38,
+    "n": 74
+   },
+   "D5_W5_r2": {
+    "r": 26,
+    "n": 86
+   },
+   "D5_W5_r3": {
+    "r": 26,
+    "n": 41,
+    "x": 7
+   },
+   "D5_W6_r1": {
+    "r": 20,
+    "n": 36
+   },
+   "D5_W6_r2": {
+    "n": 30,
+    "r": 28
+   },
+   "D5_W6_r3": {
+    "n": 33,
+    "r": 36
+   }
+  }
  }
 }
