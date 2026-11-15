@@ -1,0 +1,8 @@
+{
+ "note": "sequence model operating curve: each recording scored by the fold model that did not see it, one global threshold swept (grid 0.005)",
+ "recall_at_ft": {
+  "0.02": 0.25,
+  "0.05": 0.5929054054054054,
+  "0.1": 0.6745495495495496
+ }
+}

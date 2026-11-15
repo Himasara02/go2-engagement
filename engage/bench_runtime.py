@@ -3,7 +3,7 @@
 
     ~/miniconda3/envs/go2/bin/python bench_runtime.py [take] [frames]
 
-Stages per frame: decode; people = pose on 6 overlapping strips (dataset pipeline) and, for comparison,
+Stages per frame: decode; people = pose on 5 overlapping strips (dataset pipeline) and, for comparison,
 one whole-frame pose pass (live perception.py); then per person: hand landmarks on the 640x640 upper-body
 crop + keypoint classifier, face/iris on the 256 px head crop (gaze), IT2 engagement with 11 rules.
 Writes results/full/runtime.{json,md}.
