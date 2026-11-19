@@ -1,0 +1,197 @@
+{
+ "ceiling_r": {
+  "episodes": 1776,
+  "gesture_only_accepts": 1253,
+  "rate": 0.7055,
+  "not_sustained_by_cause": {
+   "classifier: command class with confidence >= 0.45 not held for 3 frames": 514,
+   "person, cues or depth missing": 9
+  }
+ },
+ "ceiling_n": {
+  "episodes": 2185,
+  "gesture_only_accepts": 1476,
+  "rate": 0.6755,
+  "not_sustained_by_cause": {
+   "classifier: command class with confidence >= 0.45 not held for 3 frames": 689,
+   "person, cues or depth missing": 20
+  }
+ },
+ "separation": {
+  "r": {
+   "n": 1776,
+   "facing": {
+    "median": 0.937,
+    "q25": 0.897,
+    "q75": 0.96
+   },
+   "gaze": {
+    "median": 0.964,
+    "q25": 0.886,
+    "q75": 0.989
+   },
+   "distance": {
+    "median": 2.607,
+    "q25": 2.39,
+    "q75": 2.843
+   },
+   "facing_sigma": {
+    "median": 0.04,
+    "q25": 0.04,
+    "q75": 0.042
+   },
+   "distance_sigma": {
+    "median": 0.117,
+    "q25": 0.1,
+    "q75": 0.144
+   }
+  },
+  "n": {
+   "n": 2185,
+   "facing": {
+    "median": 0.169,
+    "q25": 0.114,
+    "q75": 0.431
+   },
+   "gaze": {
+    "median": 0.0,
+    "q25": 0.0,
+    "q75": 0.095
+   },
+   "distance": {
+    "median": 2.049,
+    "q25": 1.853,
+    "q75": 2.427
+   },
+   "facing_sigma": {
+    "median": 0.04,
+    "q25": 0.04,
+    "q75": 0.05
+   },
+   "distance_sigma": {
+    "median": 0.104,
+    "q25": 0.079,
+    "q75": 0.138
+   }
+  }
+ },
+ "it2_gaze_share_of_gesture_only": {
+  "commands_kept_of_those_gesture_only_obeys": 0.9274,
+  "bystander_gestures_passed_of_those_gesture_only_obeys": 0.1138
+ },
+ "false_triggers": {
+  "cues": {
+   "n": 168,
+   "facing": {
+    "median": 0.907,
+    "q25": 0.861,
+    "q75": 0.946
+   },
+   "gaze": {
+    "median": 0.86,
+    "q25": 0.69,
+    "q75": 0.977
+   },
+   "distance": {
+    "median": 2.527,
+    "q25": 2.386,
+    "q75": 2.856
+   },
+   "facing_sigma": {
+    "median": 0.041,
+    "q25": 0.04,
+    "q75": 0.072
+   },
+   "distance_sigma": {
+    "median": 0.128,
+    "q25": 0.108,
+    "q75": 0.203
+   }
+  },
+  "by_scenario": {
+   "S1": {
+    "accepted": 0,
+    "bystander_episodes": 0
+   },
+   "S2": {
+    "accepted": 32,
+    "bystander_episodes": 584
+   },
+   "S3": {
+    "accepted": 35,
+    "bystander_episodes": 915
+   },
+   "S4": {
+    "accepted": 18,
+    "bystander_episodes": 371
+   },
+   "S5": {
+    "accepted": 2,
+    "bystander_episodes": 8
+   },
+   "S6": {
+    "accepted": 81,
+    "bystander_episodes": 307
+   }
+  },
+  "facing_at_least_0.76": 0.905
+ },
+ "missed_commands": {
+  "cues": {
+   "n": 91,
+   "facing": {
+    "median": 0.653,
+    "q25": 0.528,
+    "q75": 0.787
+   },
+   "gaze": {
+    "median": 0.432,
+    "q25": 0.096,
+    "q75": 0.712
+   },
+   "distance": {
+    "median": 2.536,
+    "q25": 2.387,
+    "q75": 2.8
+   },
+   "facing_sigma": {
+    "median": 0.116,
+    "q25": 0.053,
+    "q75": 0.206
+   },
+   "distance_sigma": {
+    "median": 0.146,
+    "q25": 0.101,
+    "q75": 0.509
+   }
+  },
+  "kept_for_comparison": {
+   "n": 1162,
+   "facing": {
+    "median": 0.941,
+    "q25": 0.907,
+    "q75": 0.962
+   },
+   "gaze": {
+    "median": 0.971,
+    "q25": 0.914,
+    "q75": 0.99
+   },
+   "distance": {
+    "median": 2.607,
+    "q25": 2.394,
+    "q75": 2.853
+   },
+   "facing_sigma": {
+    "median": 0.04,
+    "q25": 0.04,
+    "q75": 0.04
+   },
+   "distance_sigma": {
+    "median": 0.116,
+    "q25": 0.098,
+    "q75": 0.139
+   }
+  }
+ }
+}
